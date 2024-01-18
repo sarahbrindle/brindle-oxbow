@@ -6,7 +6,7 @@ Author: Brindle Digital
 Author URI: https://www.brindledigital.com/
 GitHub Theme URI: https://github.com/sarahbrindle/brindle-oxbow
 GitHub Branch:    master
-Version: v1.0.0.02
+Version: v1.0.0.03
 Date:            18-01-2024
 Requires at least: 5.0
 Tested up to: 5.7
@@ -174,7 +174,7 @@ textarea {overflow: auto;}
   --primary-font: 'Sweet Sans Pro', serif;
   --secondary-font: 'FreightDisp Pro', serif;
   --white: #fff;
-  --black: #FF0000;
+  --black: #1F2A36;
   --primary-color: #9A7536;
   --secondary-color: #BACDCE;
   --tertiary-color: #363636;
@@ -284,7 +284,7 @@ a:hover {
     letter-spacing: 3.64px;
 }
 .link-btn.t-w {
-    color: var(-secondary-color);
+    color: var(--secondary-color);
 }
 .link-btn.fw-b { font-weight: 700; }
 .link-btn:hover { color: var(--white); }
@@ -582,7 +582,7 @@ address a {
 .bnr-content h1, .bnr-content h2, .bnr-content h3 {
     font-size: 8rem;
     font-weight: 300;
-    color: var(-secondary-color);
+    color: var(--secondary-color);
     padding: 0;
 }
 .bnr-content me {
