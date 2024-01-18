@@ -6,7 +6,7 @@ Author: Brindle Digital
 Author URI: https://www.brindledigital.com/
 GitHub Theme URI: https://github.com/sarahbrindle/brindle-oxbow
 GitHub Branch:    master
-Version: v1.0.0.01
+Version: v1.0.0.02
 Date:            18-01-2024
 Requires at least: 5.0
 Tested up to: 5.7
@@ -158,27 +158,46 @@ textarea {overflow: auto;}
     -webkit-appearance: button;
     font: inherit;
 }
+/*
 :root {
+
     font-size: 10px;
     --text-color: #363636;
     --title-color:  #9A7536;
     --font-1:  'Sweet Sans Pro', serif;
     --font-2:  'FreightDisp Pro', serif;
+    --black: #1F2A36;
+}
+*/
+:root {
+    font-size: 10px;
+  --primary-font: 'Sweet Sans Pro', serif;
+  --secondary-font: 'FreightDisp Pro', serif;
+  --white: #fff;
+  --black: #FF0000;
+  --primary-color: #9A7536;
+  --secondary-color: #BACDCE;
+  --tertiary-color: #363636;
+   --h1-size: 60px;
+  --h2-size: 32px;
+  --h1-font: 'FreightDisp Pro', serif;
+  --h2-font: 'FreightDisp Pro', serif;
 }
 html, body {
     margin: 0;
     padding: 0;
-    color: #333333;
-    font: normal 400 1.8rem/1.66 var(--font-1);
+    /*color: #333333;*/
+    color:var(--tertiary-color);
+    font: normal 400 1.8rem/1.66 var(--primary-font);
     overflow-x: hidden;
-    background: #fff;
+    background: var(--white);
     letter-spacing: 0;
 }
 h1, h2, h3, h4, h5, h6 { 
-    color: #9A7536;
+    color: var(--primary-color);
     font-size: inherit;
     font-weight: 700;
-    font-family: var(--font-2);
+    font-family: var(--secondary-font);
     line-height: 1.2;
     margin: 0;
     padding: 0 0 0.8em 0;
@@ -249,7 +268,7 @@ a:hover {
 .ai-c { align-items: center; }
 .ai-fe { align-items: flex-end; }
 .sec-wide { padding: 120px 0; }
-.bg-white { background-color: #fff; }
+.bg-white { background-color: var(--white); }
 .link-btn {
     display: inline-flex;
     align-items: center;
@@ -257,7 +276,7 @@ a:hover {
     min-width: 250px;
     min-height: 75px;
     font-size: 1.4rem;
-    color: #363636;
+    color: var(--tertiary-color);
     text-transform: uppercase;
     padding: 0 15px;
     position: relative;
@@ -265,16 +284,16 @@ a:hover {
     letter-spacing: 3.64px;
 }
 .link-btn.t-w {
-    color: #BACDCE;
+    color: var(-secondary-color);
 }
 .link-btn.fw-b { font-weight: 700; }
-.link-btn:hover { color: #fff; }
+.link-btn:hover { color: var(--white); }
 .link-btn::before, .link-btn::after {
     content: '';
     display: block;
     position: absolute;
     z-index: -1;
-    border: 1px solid #9A7536;
+    border: 1px solid var(--primary-color);
     transition: all .2s ease-in-out;
 }
 .link-btn::before {
@@ -289,15 +308,15 @@ a:hover {
     left: 5px;
     top: 0;
 }
-.link-btn.t-w::before, .link-btn.t-w::after { border-color: #fff; }
-.link-btn.t-w:hover { color: #1F2A36; }
+.link-btn.t-w::before, .link-btn.t-w::after { border-color: var(--white); }
+.link-btn.t-w:hover { color: var(--black); }
 .link-btn:hover::before {
-    background-color: #1F2A36;
-    border-color: #1F2A36;
+    background-color: var(--black);
+    border-color: var(--black);
 }
 .link-btn.t-w:hover::before {
-    border-color: #fff;
-    background-color: #fff;
+    border-color: var(--white);
+    background-color: var(--white);
 }
 
 /*== Slick Carousel ==*/
@@ -326,7 +345,7 @@ a:hover {
 .slick-arrow.slick-disabled { opacity: 0.4; cursor: default; user-select: none; }
 .slick-dots { list-style: none; margin: 0; padding: 40px 0 0; display: flex; align-items: center; justify-content: center; }
 .slick-dots > li { padding: 0 6px; }
-.slick-dots > li > button { border: none; padding: 0; width: 15px; height: 15px; border-radius: 50%; background: #fff; text-indent: -99999px; }
+.slick-dots > li > button { border: none; padding: 0; width: 15px; height: 15px; border-radius: 50%; background: var(--white); text-indent: -99999px; }
 .slick-dots > li.slick-active > button { background: #f00; }
 
 /*== SITE HEADER ==*/
@@ -400,7 +419,7 @@ a:hover {
     display: block;
     position: absolute;
     z-index: -1;
-    border: 1px solid #9A7536;
+    border: 1px solid var(--primary-color);
     transition: all .2s ease-in-out;
     opacity: 0;
     visibility: hidden;
@@ -429,29 +448,29 @@ a:hover {
 }
 
 .navmenu > li.nav-btn > a {
-    background: #1F2A36;
+    background: var(--black);
     height: 44px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     padding: 10px 20px;
-    color: #fff;
+    color: var(--white);
     border-radius: 2px;
     letter-spacing: 1.95px;
-    border: 1px solid #1F2A36;
+    border: 1px solid var(--black);
 }
 .navmenu > li.nav-btn > a:hover {
-    background-color: #fff;
-    border-color: #9A7536;
-    color: #1F2A36;
+    background-color: var(--white);
+    border-color: var(--primary-color);
+    color: var(--black);
 }
 .navmenu > li.nav-btn > a::before, .navmenu > li.nav-btn > a::after { display: none; }
 
 
 /*== SITE FOOTER ==*/
 #colophon {
-    background: #1F2A36;
-    color: #fff;
+    background: var(--black);
+    color: var(--white);
     padding: 110px 0 80px;
 }
 .fgroup {
@@ -465,11 +484,11 @@ a:hover {
 }
 .fmenu h4, .fmenu h5, .fmenu h6 {
     font-weight: 500;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid var(--white);
     padding: 0 0 15px;
     text-transform: uppercase;
     margin: 0 0 15px;
-    color: #fff;
+    color: var(--white);
 }
 .fmenu ul {
     list-style: none;
@@ -523,11 +542,11 @@ address a {
     margin: 0 0 85px;
 }
 .bnr-content {
-    background: #1F2A36;
+    background: var(--black);
     width: 100%;
     max-width: 1360px;
     padding: 60px 0 60px 60px;
-    color: #fff;
+    color: var(--white);
     position: absolute;
     z-index: 10;
     left: 50%;
@@ -545,7 +564,7 @@ address a {
     height: 100%;
     top: 0;
     right: 50%;
-    background: #1F2A36;
+    background: var(--black);
     padding-right: 380px;
 }
 .bnr-txt {
@@ -563,7 +582,7 @@ address a {
 .bnr-content h1, .bnr-content h2, .bnr-content h3 {
     font-size: 8rem;
     font-weight: 300;
-    color: #BACDCE;
+    color: var(-secondary-color);
     padding: 0;
 }
 .bnr-content me {
@@ -576,10 +595,10 @@ address a {
     margin: 0 30px 30px 0;
 }
 .slick-prev {
-    background: #fff url('assets/images/ic-prev.svg') center / 30px auto no-repeat;
+    background: var(--white) url('assets/images/ic-prev.svg') center / 30px auto no-repeat;
 }
 .slick-next {
-    background: #fff url('assets/images/ic-next.svg') center / 30px auto no-repeat;
+    background: var(--white) url('assets/images/ic-next.svg') center / 30px auto no-repeat;
 }
 .bnr-slider .slick-arrow {
     width: 90px;
@@ -587,15 +606,15 @@ address a {
     top: auto;
     bottom: 85px;
     transform: none;
-    background-color: #fff;
+    background-color: var(--white);
 }
 .bnr-slider .slick-prev {
-    background: #fff url('assets/images/ic-prev.svg') right 10px center / 54px auto no-repeat;
+    background: var(--white) url('assets/images/ic-prev.svg') right 10px center / 54px auto no-repeat;
     left: auto;
     right: 170px;
 }
 .bnr-slider .slick-next {
-    background: #fff url('assets/images/ic-next.svg') left 10px center / 54px auto no-repeat;
+    background: var(--white) url('assets/images/ic-next.svg') left 10px center / 54px auto no-repeat;
     left: auto;
     right: 80px;
 }
@@ -605,8 +624,8 @@ address a {
 }
 .catg-tagline {
     font-size: 3.2rem;
-    color: #1F2A36;
-    font-family: var(--font-2);
+    color: var(--black);
+    font-family: var(--secondary-font);
     font-style: italic;
 }
 .col-title {
@@ -618,7 +637,7 @@ address a {
     display: block;
     width: 80px;
     height: 2px;
-    background: #9A7536;
+    background: var(--primary-color);
     margin: 25px 0;
 }
 .feat-txt {
@@ -644,7 +663,7 @@ address a {
     background: center / cover no-repeat;
     position: relative;
     z-index: 5;
-    color: #fff;
+    color: var(--white);
 }
 .sec-gallery::before {
     content: '';
@@ -674,7 +693,7 @@ address a {
     display: block;
     position: absolute;
     z-index: 2;
-    border: 1px solid #fff;
+    border: 1px solid var(--white);
     transition: all .2s ease-in-out;
 }
 .gallery-frame::before {
@@ -694,13 +713,13 @@ address a {
     z-index: 20;
 }
 .gf-content .catg-tagline {
-    color: #fff;
+    color: var(--white);
     padding: 0 0 20px;
     display: block;
 }
 .grid-title {
     font-size: 5.7rem;
-    color: #fff;
+    color: var(--white);
     font-weight: 300;
 }
 .gf-action {
@@ -714,28 +733,28 @@ address a {
     min-width: 250px;
     min-height: 75px;
     font-size: 1.4rem;
-    color: #363636;
+    color: var(--tertiary-color);
     text-transform: uppercase;
     padding: 0 15px;
     position: relative;
     z-index: 0;
     letter-spacing: 3.64px;
-    border: 1px solid #9A7536;
+    border: 1px solid var(--primary-color);
 }
 .link-btn-normal:hover {
-    color: #fff;
-    background-color: #1F2A36;
-    border-color: #1F2A36;
+    color: var(--white);
+    background-color: var(--black);
+    border-color: var(--black);
 }
 .link-btn-normal.t-w {
-    background-color: #1F2A36;
-    color: #fff;
-    border-color: #1F2A36;
+    background-color: var(--black);
+    color: var(--white);
+    border-color: var(--black);
 }
 .link-btn-normal.t-w:hover {
-    background-color: #fff;
-    border-color: #9A7536;
-    color: #1F2A36;
+    background-color: var(--white);
+    border-color: var(--primary-color);
+    color: var(--black);
 }
 .gallery-slider {
     max-width: 1720px;
@@ -770,7 +789,7 @@ address a {
     top: 0;
     left: 0;
     display: block;
-    color: #FFFFFF;
+    color: var(--white);
     text-transform: uppercase;
     display: flex;
     justify-content: center;
@@ -786,7 +805,7 @@ address a {
     opacity: 1;
 }
 .img-block:hover .img-title {
-    color: #9A7536;
+    color: var(--primary-color);
 }
 .gallery-slider .slick-prev {
     left: 6px;
@@ -843,10 +862,10 @@ address a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #fff;
+    color: var(--white);
     font-size: 5.7rem;
     line-height: 1.3;
-    font-family: var(--font-2);
+    font-family: var(--secondary-font);
     text-align: center;
     padding: 20px;
 }
@@ -858,7 +877,7 @@ address a {
     padding: 120px 0 0;
 }
 .cnct-wrap {
-    color: #fff;
+    color: var(--white);
     max-width: 730px;
     margin: 0 auto;
     text-align: center;
@@ -874,8 +893,8 @@ address a {
 }
 .wide-label {
     overflow: hidden;
-    background: #9A7536;
-    color: #fff;
+    background: var(--primary-color);
+    color: var(--white);
     font-size: 3rem;
     font-weight: 300;
     display: flex;
