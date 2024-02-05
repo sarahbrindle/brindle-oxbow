@@ -21,7 +21,11 @@ if($module['buttons']){
   </div>
   <?php if($module['scroll_content']){?>
       <div class="wide-label">
-        <span><?=$module['scroll_content']?></span> 
+        <span>
+          <marquee width="100%" direction="left">
+              <?=$module['scroll_content']?>
+          </marquee>
+        </span>
       </div>
   <?php }?>
 </section>

@@ -57,7 +57,11 @@ if($module['buttons']){
       </div>
 
       <div class="wide-label">
-        <span><?=$module['scroll_content']?></span> 
+        <span>
+          <marquee width="100%" direction="left">
+              <?=$module['scroll_content']?>
+          </marquee>
+        </span> 
       </div>
 
     </section>
