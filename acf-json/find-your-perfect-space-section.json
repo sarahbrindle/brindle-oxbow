@@ -1,0 +1,110 @@
+{
+    "key": "group_652b375a58971",
+    "title": "Find Your Perfect Space Section",
+    "fields": [
+        {
+            "key": "field_652b375a13bf5",
+            "label": "Show Section",
+            "name": "show_section",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        },
+        {
+            "key": "field_652b39ebad69a",
+            "label": "Edit Section Content For This Page",
+            "name": "edit_section_content_for_this_page",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_652b375a13bf5",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        },
+        {
+            "key": "field_652b3a11ad69b",
+            "label": "Overwrite Section Content",
+            "name": "overwrite_section_content",
+            "aria-label": "",
+            "type": "clone",
+            "instructions": "Any sections left blank will not default back to the content set in the global options. This is to allow for blank sections as a means to remove that content entirely. If you select to edit for this page be sure to fill out all desired content, even if that means repeating content from the global options.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_652b39ebad69a",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "field_652b33651eef6"
+            ],
+            "display": "group",
+            "layout": "block",
+            "prefix_label": 1,
+            "prefix_name": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1706597724
+}

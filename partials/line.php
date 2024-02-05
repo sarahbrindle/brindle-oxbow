@@ -1,0 +1,1 @@
+<div class="line-motif <?php echo $args['classes']; ?>"><span></span></div>
