@@ -104,3 +104,15 @@ $(window).scroll(function(){
 $(window).resize(function(){
 
 });
+
+
+
+
+$(document).ready(function() {
+  $(".btn-menu").click(function() {
+    // Toggle the 'toggled' class on the button
+    $(this).toggleClass("open");
+    $(".overlay-nav").slideToggle();
+    $("body").toggleClass("open");
+  });
+});
