@@ -34,11 +34,55 @@ if($module['buttons']){
   </div>
   <?php if($module['scroll_content']){?>
       <div class="wide-label">
-        <span>
-          <marquee width="100%" direction="left">
-              <?=$module['scroll_content']?>
-          </marquee>
-        </span>
+
+        <div class="scroll-track">
+            <div>
+              <div class="scrlabel">New Leasing Specials</div>
+            </div>
+            <div>
+              <div class="scrlabel">New Leasing Specials</div>
+            </div>
+            <div>
+              <div class="scrlabel">New Leasing Specials</div>
+            </div>
+            <div>
+              <div class="scrlabel">New Leasing Specials</div>
+            </div>
+            <div>
+              <div class="scrlabel">New Leasing Specials</div>
+            </div>
+            <div>
+              <div class="scrlabel">New Leasing Specials</div>
+            </div>
+            <div>
+              <div class="scrlabel">New Leasing Specials</div>
+            </div>
+            <div>
+              <div class="scrlabel">New Leasing Specials</div>
+            </div>
+            <div>
+              <div class="scrlabel">New Leasing Specials</div>
+            </div>
+            <div>
+              <div class="scrlabel">New Leasing Specials</div>
+            </div>
+            <div>
+              <div class="scrlabel">New Leasing Specials</div>
+            </div>
+            <div>
+              <div class="scrlabel">New Leasing Specials</div>
+            </div>
+            <div>
+              <div class="scrlabel">New Leasing Specials</div>
+            </div>
+            <div>
+              <div class="scrlabel">New Leasing Specials</div>
+            </div>
+            <div>
+              <div class="scrlabel">New Leasing Specials</div>
+            </div>
+        </div>
+
       </div>
   <?php } ?>
 </section>

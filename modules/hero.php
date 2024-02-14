@@ -1,7 +1,7 @@
 <?php $module = $args['module']; ?>
 <!--module banner starts here-->
 <section id="banner">
-    <div class="bnr-slider" data-aos="zoom-out">
+    <div class="bnr-slider">
     <?php if($module['slider']){foreach ($module['slider'] as $image) { ?>
         <div>
             <div class="bnr-home" style="background-image: url('<?=$image['photo']['url']?>');">&nbsp;

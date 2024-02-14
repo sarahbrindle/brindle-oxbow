@@ -151,6 +151,23 @@
                     "parent_repeater": "field_65be4327b75da"
                 },
                 {
+                    "key": "field_65c362d509de3",
+                    "label": "Link",
+                    "name": "link",
+                    "aria-label": "",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "parent_repeater": "field_65be4327b75da"
+                },
+                {
                     "key": "field_65be437ab75dd",
                     "label": "Box",
                     "name": "box",
@@ -197,23 +214,6 @@
                             "mime_types": "",
                             "preview_size": "medium",
                             "parent_repeater": "field_65be437ab75dd"
-                        },
-                        {
-                            "key": "field_65be4398b75df",
-                            "label": "Box Link",
-                            "name": "box_link",
-                            "aria-label": "",
-                            "type": "link",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "return_format": "array",
-                            "parent_repeater": "field_65be437ab75dd"
                         }
                     ],
                     "parent_repeater": "field_65be4327b75da"
@@ -239,5 +239,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1706974834
+    "modified": 1707303665
 }
