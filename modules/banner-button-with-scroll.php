@@ -19,13 +19,15 @@ if($module['buttons']){
               <?php } ?>
         </div>
   </div>
-  <?php if($module['scroll_content']){?>
+  <?php if($module['scroll_items']){?>
       <div class="wide-label">
-        <span>
-          <marquee width="100%" direction="left">
-              <?=$module['scroll_content']?>
-          </marquee>
-        </span>
+        <div class="scroll-track">
+            <?php if($module['scroll_items']){foreach ($module['scroll_items'] as $item) { ?>
+            <div>
+              <div class="scrlabel"><?php echo $item['item'];?></div>
+            </div>
+          <?php }}?>            
+        </div>
       </div>
   <?php }?>
 </section>

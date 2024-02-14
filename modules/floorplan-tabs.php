@@ -1,5 +1,5 @@
 <?php $module = $args['module']; ?>
-<section class="sec-floorplan-full">
+<section class="sec-floorplan-full" id="floorplan">
   <div class="container">
     <div class="nav-tabs-outer">
       <ul class="nav nav-tabs js-tabs">

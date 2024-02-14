@@ -10,6 +10,18 @@
         $fonts = get_field('fonts', 'options');
         $typography = get_field('typography', 'options');
         $import_string = get_import_string($fonts);
+
+        $h1_size = $typography['h1']['font_size']/10;
+        $h2_size = $typography['h2']['font_size']/10;
+        $h3_size = $typography['h3']['font_size']/10;
+        $h4_size = $typography['h4']['font_size']/10;
+        $h5_size = $typography['h5']['font_size']/10;
+        $h6_size = $typography['h6']['font_size']/10;
+
+        $body_copy_large = $typography['body_copy_large']['font_size']/10;
+        $body_copy_standard = $typography['body_copy_standard']['font_size']/10;
+        $body_copy_small = $typography['body_copy_small']['font_size']/10;
+
     ?>
     <style>
         /* Font import */
@@ -33,21 +45,21 @@
             --subheadings: "<?php echo $fonts['subheadings']['font_name']; ?>";
             --secondary-font: "<?php echo $fonts['subheadings']['font_name']; ?>";
             /* Typography */
-            --h1-size: <?php echo "{$typography['h1']['font_size']}px"; ?>;
-            --h2-size: <?php echo "{$typography['h2']['font_size']}px"; ?>;
-            --h3-size: <?php echo "{$typography['h3']['font_size']}px"; ?>;
-            --h4-size: <?php echo "{$typography['h4']['font_size']}px"; ?>;
-            --h5-size: <?php echo "{$typography['h5']['font_size']}px"; ?>;
-            --h6-size: <?php echo "{$typography['h6']['font_size']}px"; ?>;
+            --h1-size: <?php echo "{$h1_size}rem"; ?>;
+            --h2-size: <?php echo "{$h2_size}rem"; ?>;
+            --h3-size: <?php echo "{$h3_size}rem"; ?>;
+            --h4-size: <?php echo "{$h4_size}rem"; ?>;
+            --h5-size: <?php echo "{$h5_size}rem"; ?>;
+            --h6-size: <?php echo "{$h6_size}rem"; ?>;
             --h1-font: <?php echo get_font($typography['h1']['font']); ?>;
             --h2-font: <?php echo get_font($typography['h2']['font']); ?>;
             --h3-font: <?php echo get_font($typography['h3']['font']); ?>;
             --h4-font: <?php echo get_font($typography['h4']['font']); ?>;
             --h5-font: <?php echo get_font($typography['h5']['font']); ?>;
             --h6-font: <?php echo get_font($typography['h6']['font']); ?>;
-            --body-copy-large-size: <?php echo "{$typography['body_copy_large']['font_size']}px"; ?>;
-            --body-copy-standard-size: <?php echo "{$typography['body_copy_standard']['font_size']}px"; ?>;
-            --body-copy-small-size: <?php echo "{$typography['body_copy_small']['font_size']}px"; ?>;
+            --body-copy-large-size: <?php echo "{$body_copy_large}rem"; ?>;
+            --body-copy-standard-size: <?php echo "{$body_copy_standard}rem"; ?>;
+            --body-copy-small-size: <?php echo "{$body_copy_small}rem"; ?>;
             --body-copy-large-font: <?php echo get_font($typography['body_copy_large']['font']); ?>;
             --body-copy-standard-font: <?php echo get_font($typography['body_copy_standard']['font']); ?>;
             --body-copy-small-font: <?php echo get_font($typography['body_copy_small']['font']); ?>;

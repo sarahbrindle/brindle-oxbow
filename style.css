@@ -6,8 +6,8 @@ Author: Brindle Digital
 Author URI: https://www.brindledigital.com/
 GitHub Theme URI: https://github.com/sarahbrindle/brindle-oxbow
 GitHub Branch:    master
-Version: v1.0.0.03
-Date:            18-01-2024
+Version: v1.0.0.04
+Date:            06-02-2024
 Requires at least: 5.0
 Tested up to: 5.7
 Requires PHP: 7.0
@@ -185,7 +185,7 @@ html, body {
     margin: 0;
     padding: 0;
     color: var(--tertiary-color);
-    font: normal 400 1.8rem/1.66 var(--primary-font);
+    font: normal 400 var(--body-copy-large-size)/1.66 var(--primary-font);
     overflow-x: hidden;
     background: var(--white);
     letter-spacing: 0;
@@ -199,6 +199,7 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
     padding: 0 0 0.8em 0;
 }
+/*
 h1 {
     font-size: 5.7rem;
 }
@@ -217,6 +218,32 @@ h5 {
 h6 {
     font-size: 2.4rem;
 }
+*/
+h1 {
+  font-family: var(--h1-font) !important;
+  font-size: var(--h1-size); 
+}
+h2 {
+  font-family: var(--h2-font) !important;
+  font-size: var(--h2-size); 
+}
+h3 {
+  font-family: var(--h3-font) !important;
+  font-size: var(--h3-size); 
+}
+h4 {
+  font-family: var(--h4-font) !important;
+  font-size: var(--h4-size); 
+}
+h5 {
+  font-family: var(--h5-font) !important;
+  font-size: var(--h5-size); 
+}
+h6 {
+  font-family: var(--h6-font) !important;
+  font-size: var(--h6-size); 
+}
+
 p {
     font-family: inherit;
     color: inherit;
@@ -370,7 +397,7 @@ a:hover {
   z-index: 998;
   position: fixed;
   inset: 0;
-  background-color: var(--secondary-color);
+  background-color: var(--black);
   padding: 80px 30px 40px;
   display: none;
   transition: none;
@@ -385,7 +412,7 @@ a:hover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 25px;
+  gap: 10px;
   height: 100%;
 }
 
@@ -394,10 +421,11 @@ a:hover {
 }
 
 .overlay-menu li a {
-  font-size: 28px;
-  line-height: 1.4;
-  font-weight: 500;
-  color: var(--tertiary-color);
+  font-family: var(--h3-font) !important;
+  font-size: var(--h3-size); 
+  /*line-height: 1.4;
+  font-weight: 500;*/
+  color: var(--white);
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -405,12 +433,13 @@ a:hover {
   flex-wrap: nowrap;
   text-transform: uppercase;
   opacity: 1;
-  transition: opacity 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .overlay-menu li a:hover,
 .overlay-menu li a:focus {
   opacity: 1;
+  color: var(--primary-color);
 }
 
 .overlay-menu li a.others-hovered {
@@ -741,6 +770,9 @@ a:hover {
     padding: 0;
     margin: 0 0 30px;
 }
+#colophon a:hover {
+    color: var(--primary-color);
+}
 address a {
     text-decoration: underline;
 }
@@ -791,24 +823,23 @@ address a {
 }
 .bnr-content {
     background: var(--black);
-    width: 100%;
-    max-width: 1360px;
-    padding: 60px 0 60px 60px;
+    width: 1570px;
+    max-width: 75%;
+    padding: 30px 0 30px 20px;
     color: var(--white);
     position: absolute;
     z-index: 10;
-    left: 50%;
+    right: 340px;
     bottom: 0;
-    transform: translateX(-50%);
+    transform: none;
     font-size: 2.6rem;
-    margin-left: -60px;
 }
 .bnr-content::before {
     content: '';
     display: block;
     position: absolute;
     z-index: 0;
-    width: 50vw;
+    width: 100vw;
     height: 100%;
     top: 0;
     right: 50%;
@@ -818,14 +849,16 @@ address a {
 .bnr-txt {
     position: relative;
     z-index: 5;
-    width: 100%;
+    width: auto;
 }
+.bnr-txt p { margin-top: 20px; }
 .bnr-content .link-btn {
     position: absolute;
     z-index: 0;
     right: 100px;
     top: 50%;
     transform: translateY(-50%);
+    margin-top: 15px;
 }
 .bnr-content h1, .bnr-content h2, .bnr-content h3 {
     font-size: 8rem;
@@ -866,7 +899,7 @@ address a {
     left: auto;
     right: 80px;
 }
-.container.maxwrap {
+section .maxwrap {
     max-width: 1292px;
     margin: 0 auto;
 }
@@ -877,8 +910,12 @@ address a {
     font-style: italic;
 }
 .col-title {
-    font-size: 5.7rem;
+    font-size: var(--h2-size); 
     font-weight: 400;
+    line-height: 1.18;
+}
+#featured .col-title {
+    max-width: 470px;
 }
 .col-title::after {
     content: '';
@@ -896,9 +933,9 @@ address a {
 .wmark-img {
 	padding-left: 16%;
 	padding-bottom: 20px;
-	margin-top: -16%;
+	margin-top: -22%;
 }
-.wmark-img img { max-width: 115%; }
+.wmark-img img { max-width: 160%; }
 .feat-txt::before {
     content: '';
     display: none;
@@ -978,7 +1015,7 @@ address a {
     display: block;
 }
 .grid-title {
-    font-size: 5.7rem;
+    font-size: var(--h2-size); 
     color: var(--white);
     font-weight: 300;
 }
@@ -1099,7 +1136,7 @@ address a {
     background: center / cover no-repeat;
     position: relative;
     z-index: 0;
-    transition: all 1.5s ease-in-out;
+    transition: all 0.8s ease-in-out;
 }
 .grid-block > li:hover .img-grid {
     transform: scale(1.1);
@@ -1116,7 +1153,7 @@ address a {
     justify-content: center;
     align-items: center;
     color: var(--white);
-    font-size: 5.7rem;
+    font-size: var(--h2-size); 
     line-height: 1.3;
     font-family: var(--secondary-font);
     text-align: center;
@@ -1145,18 +1182,27 @@ address a {
     padding: 0 15px;
 }
 .wide-label {
-    overflow: hidden;
+    overflow-x: hidden;
     background: var(--primary-color);
     color: var(--white);
     font-size: 3rem;
     font-weight: 300;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 28px 0;
     margin: 120px 0 0;
-    white-space: nowrap;
     text-transform: uppercase;
+    position: relative;
+    width: 100vw;
+    max-width: 100%;
+}
+.scrlabel {
+    display: inline-flex;
+    white-space: nowrap;
+    align-items: center;
+}
+.scrlabel::after {
+    content: '|';
+    display: inline-block;
+    margin: 0 5px;
 }
 .sec-action {
     padding: 50px 0 0;
@@ -1225,7 +1271,7 @@ address a {
 }
 .sec-title {
     text-align: center;
-    font-size: 5.7rem;
+    font-size: var(--h2-size); 
     font-weight: 300;
     margin: 0 0 1em;
     padding: 0;
@@ -1239,7 +1285,7 @@ address a {
     margin: 30px auto 0;
 }
 .block-title {
-    font-size: 5.7rem;
+    font-size: var(--h2-size); 
     font-weight: 300;
     color: var(--primary-color);
     padding: 0;
@@ -1533,7 +1579,7 @@ address a {
     text-align: center;
 }
 .text-banner-wrap h1, .text-banner-wrap h2, .text-banner-wrap h3, .text-banner-wrap h4 {
-    font-size: 5.7rem;
+    font-size: var(--h2-size); 
     font-weight: 300;
     padding: 0 0 0.2em;
 }
@@ -1707,6 +1753,13 @@ address a {
     padding: 0 20px;
 }
 .stpfmbox label { font-size: inherit!important; }
+.gfield_required{
+    display: none !important;
+}
+.module-pet-policy h1, .module-pet-policy h2, .module-pet-policy h3, .module-pet-policy h4, .module-pet-policy h5, .module-pet-policy h6 {
+    font-weight: 400;
+}
+
 
 /*== RESPONSIVE ==*/
 @media only screen and (max-width: 1800px) {
@@ -1718,9 +1771,8 @@ address a {
     }
     .bnr-content {
         padding: 20px 0 30px 20px;
-        margin-left: -40px;
         font-size: 2.1rem;
-        max-width: 1200px;
+        right: 260px;
     }
     .bnr-content h1, .bnr-content h2, .bnr-content h3 {
         font-size: 6rem;
@@ -1734,7 +1786,8 @@ address a {
         font-size: 1.3rem;
     }
     .bnr-content .link-btn {
-        right: 20px;
+        right: 50px;
+        margin-top: 10px;
     }
     .bnr-slider .slick-arrow {
         bottom: 85px;
@@ -1857,14 +1910,13 @@ address a {
     .sec-locate .cont-block { margin-bottom: 70px; }
 	.wmark-img { padding: 0;}
 	.wmark-img img { max-width: 100%;}
+    section .maxwrap { max-width: 1200px; }
 }
 @media only screen and (max-width: 1570px) {
     .bnr-content {
-        padding: 15px 20px 15px 20px;
-        margin-left: 0;
-        left: 0;
-        transform: none;
-        max-width: 1050px;
+        padding: 20px 20px 30px 260px;
+        right: 240px;
+        max-width: 100%;
     }
     .grid-block {
         gap: 30px;
@@ -1934,7 +1986,11 @@ address a {
         min-height: calc(100vh - 85px);
     }
     .bnr-content {
-        max-width: 100%;
+        right: 0;
+        padding: 15px 20px 25px 20px;
+    }
+    .bnr-content .link-btn {
+        right: 10px;
     }
     .bnr-slider .slick-arrow {
         width: 70px;
@@ -2099,6 +2155,7 @@ address a {
     .cont-txt {
         margin: 0 auto;
     }
+    #featured .col-title { max-width: 100%; }
 }
 @media only screen and (max-width: 767px) {
     .sec-wide {

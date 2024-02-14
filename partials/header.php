@@ -58,7 +58,7 @@
                                      foreach ($list as $item) { 
                                     ?>
                                     <li <?php if($count == 1){?> class="active" <?php }?>>
-                                      <a><?php echo $item['title'];?></a>
+                                      <a <?php if ($item['link']){ if ($item['link']['target']){ echo 'target="_blank"'; }}?> <?php  if($item['link']){?> href="<?php echo $item['link']['url'];?>" <?php }?>><?php echo $item['title'];?></a>
                                       <ul <?php if($count == 1){?> class="active" <?php }?>>
                                            <?php 
                                             if($item['box']){
@@ -66,7 +66,7 @@
                                               foreach ($boxes as $box_item) {
                                               ?>
                                                     <?php  if($box_item['image']){?>
-                                                    <li><a <?php if ($box_item['box_link']){ if ($box_item['box_link']['target']){ echo 'target="_blank"'; }}?> <?php if ($box_item['box_link']){ if ($box_item['box_link']['url']){?> href="<?php echo $box_item['box_link']['url'];?>" <?php }}?> <?php if($box_item['image']){?> style="background-image: url(<?php echo $box_item['image']['url'];?>);" <?php }?>><span><?php if ($box_item['box_link']){echo $box_item['box_link']['title'];}?></span></a></li>
+                                                    <li><a  <?php if($box_item['image']){?> style="background-image: url(<?php echo $box_item['image']['url'];?>);" <?php }?>></a></li>
                                                     <?php }  ?>
                                               <?php
                                               }}

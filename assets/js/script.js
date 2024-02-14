@@ -28,6 +28,19 @@ $(function(){
     dots: false,
   });
 
+  $('.scroll-track').slick({
+    autoplay: true,
+    autoplaySpeed: 0,
+    infinite: true,
+    speed: 5000,
+    cssEase: 'linear',
+    pauseOnHover: false,
+    arrows: false,
+    dots: false,
+    variableWidth: true,
+  });
+
+
   $('.gallery-slider').slick({
     autoplay: true,
     autoplaySpeed: 4000,
