@@ -50,31 +50,38 @@
                           echo '<li '.$button.'><a href="'.$navItem->url.'" title="'.$navItem->title.'" '.$targetClass.'>'.$navItem->title.'</a>';
                           ?>
                                 <div class="sub-menu-wrap">
-                                  <ul class="sub-menu">
-                                    <?php
-                                    $list = get_field('list', 'options');
-                                    $count = 1;
-                                    if($list){
-                                     foreach ($list as $item) { 
-                                    ?>
-                                    <li <?php if($count == 1){?> class="active" <?php }?>>
-                                      <a <?php if ($item['link']){ if ($item['link']['target']){ echo 'target="_blank"'; }}?> <?php  if($item['link']){?> href="<?php echo $item['link']['url'];?>" <?php }?>><?php echo $item['title'];?></a>
-                                      <ul <?php if($count == 1){?> class="active" <?php }?>>
-                                           <?php 
-                                            if($item['box']){
-                                              $boxes = $item['box'];
-                                              foreach ($boxes as $box_item) {
-                                              ?>
-                                                    <?php  if($box_item['image']){?>
-                                                    <li><a  <?php if($box_item['image']){?> style="background-image: url(<?php echo $box_item['image']['url'];?>);" <?php }?>></a></li>
-                                                    <?php }  ?>
-                                              <?php
-                                              }}
-                                           ?>
-                                      </ul>
-                                    </li>
-                                    <?php $count++; }} ?> 
-                                  </ul>
+
+                                  <div class="sub-menu-row">
+                                    <ul class="sub-menu">
+                                      <?php
+                                      $list = get_field('list', 'options');
+                                      $count = 1;
+                                      if($list){
+                                       foreach ($list as $item) { 
+                                      ?>
+                                      <li data-grid="menu-grid-<?php echo $count; ?>">
+                                        <a <?php if ($item['link']){ if ($item['link']['target']){ echo 'target="_blank"'; }}?> <?php  if($item['link']){?> href="<?php echo $item['link']['url'];?>" <?php }?>><?php echo $item['title'];?></a>       
+                                      </li>
+                                      <?php $count++; }} ?> 
+                                    </ul>
+                                    <ul class="sub-menu-grid">
+                                      <?php
+                                      $list = get_field('list', 'options');
+                                      $count = 1;
+                                      if($list){
+                                       foreach ($list as $item) { 
+                                      ?>
+                                      <li data-menu="menu-grid-<?php echo $count;?>">
+                                        <a <?php if ($item['link']){ if ($item['link']['target']){ echo 'target="_blank"'; }}?> <?php  if($item['link']){?> href="<?php echo $item['link']['url'];?>" <?php }?> style="background-image: url(<?php echo $item['photo'];?>);">
+                                          <span>VIEW <?php echo $item['title'];?></span>
+                                        </a>
+                                      </li>
+                                      <?php $count++; }} ?>                                      
+                                      
+                                      
+                                    </ul>
+                                  </div>
+
                                 </div>
                             </li>
                               <?php
@@ -87,7 +94,9 @@
               </ul>  
                 <?php //wp_nav_menu(array('theme_location' => 'header-menu','menu_class'=> "navmenu",'menu_id'=> "navmenu")); ?>
               </nav>
-              <button id="navtoggle" class="btn-menu">&nbsp;</button>
+              <button id="navtoggle" class="btn-menu">
+                <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+              </button>
         <?php }else{?>
               <?php if($menu_for_hamburg_menu_disabled_pages !=''){?>
                     <nav id="navmain">           
@@ -110,7 +119,43 @@
   <!--overlay-menu starts here-->
   <section class="overlay-nav">
     
-    <?php wp_nav_menu(array('theme_location' => 'full-screen-menu','menu_class'=> "overlay-menu")); ?>
+    <button class="ovl-close">&nbsp;</button>
+
+    <div class="ovlnav-wrap">
+      <div class="ovl-logo">
+
+        <?php 
+          $fdata = get_field('footer', 'options');
+        ?>
+        <img src="<?=$fdata['logo']['url']?>" alt="<?=$fdata['logo']['alt']?>">
+
+      </div>
+
+      <div class="ovl-menu">
+        
+        <?php wp_nav_menu(array('theme_location' => 'full-screen-menu','menu_class'=> "overlay-menu")); ?>
+
+        <ul class="ovl-blockmenu">
+          <li>
+            <?php 
+            $links = get_field('links', 'options');
+            $button_link = get_field('button_link', 'options');
+
+            if($links){foreach ($links as $item) { ?>
+            
+            <?php get_template_part('partials/button', null, array('button' => $item['link'],'class_alt' => '', 'has_arrow' => false)); ?>
+            <?php }}?>     
+          </li>
+          <li>
+            <?php get_template_part('partials/button', null, array('button' => $button_link,'class_alt' => 'link-btn t-w fw-b', 'has_arrow' => false)); ?>
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+    
+    <!-- <?php wp_nav_menu(array('theme_location' => 'full-screen-menu','menu_class'=> "overlay-menu")); ?> -->
     
   </section>
   <!--overlay-menu starts here-->

@@ -458,10 +458,10 @@
                 },
                 {
                     "key": "field_65b89ca0c3144",
-                    "label": "Scroll Content",
-                    "name": "scroll_content",
+                    "label": "Scroll Items",
+                    "name": "scroll_items",
                     "aria-label": "",
-                    "type": "textarea",
+                    "type": "repeater",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -470,11 +470,36 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
-                    "maxlength": "",
-                    "rows": "",
-                    "placeholder": "",
-                    "new_lines": ""
+                    "layout": "table",
+                    "pagination": 0,
+                    "min": 0,
+                    "max": 0,
+                    "collapsed": "",
+                    "button_label": "Add Row",
+                    "rows_per_page": 20,
+                    "sub_fields": [
+                        {
+                            "key": "field_65df205d5b5d8",
+                            "label": "Item",
+                            "name": "item",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "parent_repeater": "field_65b89ca0c3144"
+                        }
+                    ]
                 }
             ]
         }
@@ -497,5 +522,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1706597545
+    "modified": 1709121634
 }
