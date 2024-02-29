@@ -20,6 +20,7 @@ if($module['buttons']){
 }
 ?>
 <section id="connect" <?php if($module['background']){?> style="background-image: url(<?=$module['background']['url']?>);" <?php }?>>
+<div class="layer">
   <div class="container">
         <div class="cnct-wrap">
           <?=$module['editor']?>   
@@ -32,59 +33,20 @@ if($module['buttons']){
               <?php } ?>
         </div>
   </div>
-  <?php if($module['scroll_content']){?>
+  <?php if($module['scroll_items']){?>
       <div class="wide-label">
 
         <div class="scroll-track">
+            <?php if($module['scroll_items']){foreach ($module['scroll_items'] as $item) { ?>
             <div>
-              <div class="scrlabel">New Leasing Specials</div>
+              <div class="scrlabel"><?php echo $item['item'];?></div>
             </div>
-            <div>
-              <div class="scrlabel">New Leasing Specials</div>
-            </div>
-            <div>
-              <div class="scrlabel">New Leasing Specials</div>
-            </div>
-            <div>
-              <div class="scrlabel">New Leasing Specials</div>
-            </div>
-            <div>
-              <div class="scrlabel">New Leasing Specials</div>
-            </div>
-            <div>
-              <div class="scrlabel">New Leasing Specials</div>
-            </div>
-            <div>
-              <div class="scrlabel">New Leasing Specials</div>
-            </div>
-            <div>
-              <div class="scrlabel">New Leasing Specials</div>
-            </div>
-            <div>
-              <div class="scrlabel">New Leasing Specials</div>
-            </div>
-            <div>
-              <div class="scrlabel">New Leasing Specials</div>
-            </div>
-            <div>
-              <div class="scrlabel">New Leasing Specials</div>
-            </div>
-            <div>
-              <div class="scrlabel">New Leasing Specials</div>
-            </div>
-            <div>
-              <div class="scrlabel">New Leasing Specials</div>
-            </div>
-            <div>
-              <div class="scrlabel">New Leasing Specials</div>
-            </div>
-            <div>
-              <div class="scrlabel">New Leasing Specials</div>
-            </div>
+          <?php }}?>            
         </div>
 
       </div>
   <?php } ?>
+</div>
 </section>
 
 <?php } ?>

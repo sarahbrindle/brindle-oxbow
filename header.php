@@ -35,9 +35,11 @@
             /* Colors */
             --primary-color: <?php echo $colors['primary_color']; ?>;
             --secondary-color: <?php echo $colors['secondary_color']; ?>;
-            --tertiary-color: <?php echo $colors['tertiary_color']; ?>;
-            --black: <?php echo $colors['black']; ?>;
+            --accent-color: <?php echo $colors['accent_color']; ?>;            
+            --primary-text-color: <?php echo $colors['primary_text_color']; ?>;            
             --white: <?php echo $colors['white']; ?>;
+            --background-color: <?php echo $colors['background_color']; ?>;
+            --hover-color: <?php echo $colors['hover_color']; ?>;
             /* Fonts */
             --headings: "<?php echo $fonts['headings']['font_name']; ?>";
             --primary-font: "<?php echo $fonts['headings']['font_name']; ?>";

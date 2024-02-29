@@ -6,8 +6,8 @@ Author: Brindle Digital
 Author URI: https://www.brindledigital.com/
 GitHub Theme URI: https://github.com/sarahbrindle/brindle-oxbow
 GitHub Branch:    master
-Version: v1.0.0.05
-Date:            29-02-2024
+Version: v1.0.0.04
+Date:            06-02-2024
 Requires at least: 5.0
 Tested up to: 5.7
 Requires PHP: 7.0
@@ -492,7 +492,7 @@ a:hover {
     margin: 0 -15px;
     font-size: 1.5rem;
     display: flex;
-    color: var(--white);
+    color: #fff;
 }
 .ovl-blockmenu > li {
     flex: 0 0 auto;
@@ -596,29 +596,8 @@ a:hover {
     width: 25px;
     height: 20px;
     border: none;
-    background: none;
-    position: relative;
+    background: url('assets/images/ic-menu.svg') center / 100% auto no-repeat;
 }
-.btn-menu .icon-bar {
- height: 2px;
- width: 30px;
- position: absolute;
- left: 0;
- top: 0;
- display: block;
- -webkit-transition: .5s; /* Safari 3.1 to 6.0 */
- transition: .5s;
- background: var(--primary-color);
- width: 100%;
-}
-.btn-menu .icon-bar + .icon-bar {
- top: 8px;
- margin: 0;
-}
-.btn-menu .icon-bar + .icon-bar + .icon-bar {
- top: 16px;
-}
-
 #navmain {
     padding: 0 35px 0;
 }
@@ -1760,7 +1739,7 @@ section .maxwrap {
     font-weight: 600!important;
 }
 .cont-form .ginput_container_checkbox .gfield-choice-input {
-    border: 1px solid var(--secondary-color) !important;
+    border: 1px solid #9A7536!important;
 }
 .cont-form .gfield_checkbox .gchoice {
     padding: 0 0 15px 0!important;
@@ -1885,7 +1864,7 @@ section .maxwrap {
     background: center / cover no-repeat;
 }
 .clrside {
-    background: var(--white);
+    background: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1905,9 +1884,9 @@ section .maxwrap {
     padding: 45px 70px 45px;
     position: absolute;
     z-index: 600;
-    right: 7%;
+    right: 10%;
     bottom: 85px;
-    background: var(--white);
+    background: #fff;
 }
 .bnr-form input[type="checkbox"] {
     border: 1px solid #ccc!important;
@@ -1921,6 +1900,9 @@ section .maxwrap {
     left: 0;  
 }
 .sec-features .layer{
+    background-color: var(--background-color); 
+}
+.bgoverlay .layer{
     background-color: var(--background-color); 
 }
 /*== RESPONSIVE ==*/
@@ -2137,7 +2119,6 @@ section .maxwrap {
     .ovl-menu { width: 430px; }
     .ovl-blockmenu { justify-content: space-between; }
     .ovl-blockmenu > li { width: auto; }
-	.bnr-form { bottom: 25%; }
 }
 @media only screen and (max-width: 1280px) {
     :root {
@@ -2366,6 +2347,7 @@ section .maxwrap {
     }
     .ovl-menu { width: 100%; max-width: 450px; }
     .bnr-slider {
+        position: absolute;
         top: 0;
         left: 0;
         width: 100%;
@@ -2487,10 +2469,6 @@ section .maxwrap {
     .bnr-form {
         margin: 60px auto 220px;
     }
-	#colophon { text-align: center;}
-	#colophon a.home-link {
-		margin: 0 auto;
-	}
 }
 @media only screen and (max-width: 639px) {
     .bnr-content h1, .bnr-content h2, .bnr-content h3 {

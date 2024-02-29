@@ -1,29 +1,28 @@
 <?php $module = $args['module']; ?>
 <section class="sec-features bnrbox fx-frame mt120">
       
-      <div class="glry-grid" <?php if($module['background']){?> style="background-image: url(<?=$module['background']['url']?>)" <?php }?>>
+      <div class="bgoverlay glry-grid" <?php if($module['background']){?> style="background-image: url(<?=$module['background']['url']?>)" <?php }?>>
+            <div class="layer">
+                <div class="container mw-13">
+                  <div class="row">
+                  
 
-        <div class="container mw-13">
-          <div class="row">
-          
+                      <?php if($module['box']){foreach ($module['box'] as $item) { 
+                        $photo = $item['box_photo'];
+                      ?>
+                      <div class="col-md-4">
+                        <?php if($photo){?> 
+                            <div class="glry-card">
+                                  <a style="background-image: url(<?php echo $photo['url'];?>)"><?php echo $item['title'];?></a>
+                            </div>
+                        <?php }?>  
+                      </div>
+                      <?php }}?>
+                  
 
-              <?php if($module['box']){foreach ($module['box'] as $item) { 
-                $button = $item['link'];
-                $photo = $item['box_photo'];
-              ?>
-              <div class="col-md-4">
-                <?php if($photo){?> 
-                    <div class="glry-card">
-                          <a <?php if($button){if (isset($button['target'])){ if ($button['target']){ echo 'target="_blank"'; }}}?> href="<?php if($button){ echo $button['url'];}?>" style="background-image: url(<?php echo $photo['url'];?>)"><?php echo $item['title'];?></a>
-                    </div>
-                <?php }?>  
-              </div>
-              <?php }}?>
-          
-
-        </div>
-        </div>
-
+                </div>
+                </div>
+          </div>
       </div>
 
       <div class="sec-wide pos-rel">

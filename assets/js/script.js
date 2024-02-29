@@ -94,6 +94,20 @@ $(function(){
   });
   */
 
+  $('.ovl-close').on('click', function() {
+    $('.overlay-nav').fadeOut();
+  });
+
+  $('.sub-menu-row > ul.sub-menu > li').on('mouseenter', function() {
+    var grid = $(this).data('grid');
+    $('.sub-menu-grid li').removeClass('active');
+    $('li[data-menu="' + grid + '"]').addClass('active');
+  });
+
+  $('.sub-menu-row > ul.sub-menu > li').on('mouseleave', function() {
+    $('.sub-menu-grid li').removeClass('active');
+  });
+
 });
 
 //Window Ready

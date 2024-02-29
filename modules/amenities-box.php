@@ -7,6 +7,7 @@ if($module['buttons']){
 }
 ?>
 <section class="sec-features mt120" <?php if($module['background']){?> style="background-image: url(<?=$module['background']['url']?>)" <?php }?>>
+  <div class="layer">
       
       <div class="glry-grid">
 
@@ -15,14 +16,13 @@ if($module['buttons']){
           
 
 
-          <?php if($module['box']){foreach ($module['box'] as $item) { 
-                $button = $item['link'];
+          <?php if($module['box']){foreach ($module['box'] as $item) {                 
                 $photo = $item['photo'];
               ?>
               <div class="col-md-4">
                 <?php if($photo){?> 
                     <div class="glry-card">
-                          <a <?php if($button){if (isset($button['target'])){ if ($button['target']){ echo 'target="_blank"'; }}}?> href="<?php if($button){ echo $button['url'];}?>" style="background-image: url(<?php echo $photo['url'];?>)"><?php echo $item['title'];?></a>
+                          <a  style="background-image: url(<?php echo $photo['url'];?>)"><?php echo $item['title'];?></a>
                     </div>
                 <?php }?>  
               </div>
@@ -67,5 +67,5 @@ if($module['buttons']){
         </div>
       </div>
       <?php }?>
-
-    </section>
+</div>
+</section>

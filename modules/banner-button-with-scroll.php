@@ -7,6 +7,7 @@ if($module['buttons']){
 }
 ?>
 <section id="connect" <?php if($module['background']){?> style="background-image: url(<?=$module['background']['url']?>);" <?php }?>>
+  <div class="layer">
   <div class="container">
         <div class="cnct-wrap">
           <?=$module['editor']?>   
@@ -30,4 +31,5 @@ if($module['buttons']){
         </div>
       </div>
   <?php }?>
+</div>
 </section>
