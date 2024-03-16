@@ -19,7 +19,7 @@
                       <?php }?>                      
 					         </div>
                     <?php get_template_part('partials/copy', null, array('copy' => $module['copy'], 'class' => 'hero-subtitle')); ?>
-                    <?php get_template_part('partials/button', null, array('button' => $module['link'],'class_alt' => 'link-btn', 'has_arrow' => false)); ?>
+                    <?php get_template_part('partials/button', null, array('button' => $module['link'],'class_alt' => 'btn-link', 'has_arrow' => false)); ?>
                   </div>
 
                 </div>

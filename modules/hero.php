@@ -12,7 +12,7 @@
     <div class="bnr-content">
         <div class="bnr-txt">
               <?=$module['banner_info']?>
-              <?php get_template_part('partials/button', null, array('button' => $module['banner_button'],'class_alt' => 'link-btn t-w fw-b', 'has_arrow' => false)); ?>
+              <?php get_template_part('partials/button', null, array('button' => $module['banner_button'],'class_alt' => 'btn-link t-w fw-b', 'has_arrow' => false)); ?>
         </div>
     </div>
 </section>
