@@ -70,13 +70,14 @@
                                       $count = 1;
                                       if($list){
                                        foreach ($list as $item) { 
+                                        if($item['photo']){
                                       ?>
                                       <li data-menu="menu-grid-<?php echo $count;?>">
                                         <a <?php if ($item['link']){ if ($item['link']['target']){ echo 'target="_blank"'; }}?> <?php  if($item['link']){?> href="<?php echo $item['link']['url'];?>" <?php }?> style="background-image: url(<?php echo $item['photo'];?>);">
                                           <span>VIEW <?php echo $item['title'];?></span>
                                         </a>
                                       </li>
-                                      <?php $count++; }} ?>                                      
+                                      <?php $count++; }}} ?>                                      
                                       
                                       
                                     </ul>

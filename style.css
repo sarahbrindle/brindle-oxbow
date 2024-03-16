@@ -6,8 +6,8 @@ Author: Brindle Digital
 Author URI: https://www.brindledigital.com/
 GitHub Theme URI: https://github.com/sarahbrindle/brindle-oxbow
 GitHub Branch:    master
-Version: v1.0.0.05
-Date:            29-02-2024
+Version: v1.0.0.06
+Date:            16-03-2024
 Requires at least: 5.0
 Tested up to: 5.7
 Requires PHP: 7.0
@@ -307,6 +307,9 @@ a:hover {
     position: relative;
     z-index: 0;
     letter-spacing: 3.64px;
+    box-shadow: none !important;
+    border: 0 !important;
+    opacity: 1 !important;
 }
 .link-btn.t-w {
     color: var(--accent-color);
@@ -318,7 +321,12 @@ a:hover {
     color: var(--primary-color);
 }
 .link-btn.fw-b { font-weight: 700; }
-.link-btn:hover { color: var(--white); }
+.link-btn:hover, .link-btn:active, .link-btn:focus { 
+    color: var(--white); 
+    background-color: transparent; 
+    /*-webkit-tap-highlight-color: rgba(0,0,0,0);*/
+}
+
 .link-btn::before, .link-btn::after {
     content: '';
     display: block;
@@ -341,7 +349,7 @@ a:hover {
 }
 .link-btn.t-w::before, .link-btn.t-w::after { border-color: var(--white); }
 .link-btn.t-w:hover { color: var(--primary-color); }
-.link-btn:hover::before {
+.link-btn:hover::before,.link-btn:active::before,.link-btn:focus::before {
     background-color: var(--primary-color);
     border-color: var(--primary-color);
 }
@@ -355,6 +363,79 @@ a:hover {
 .link-btn.t-d:hover::before {
     background-color: var(--white);
 }
+.btn-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 250px;
+    min-height: 65px;
+    font-size: 1.4rem;
+    color: var(--primary-text-color);
+    text-transform: uppercase;
+    padding: 0 15px;
+    position: relative;
+    z-index: 0;
+    letter-spacing: 3.64px;
+    background-color: var(--white);
+    border: 1px solid var(--secondary-color);
+    -webkit-tap-highlight-color: transparent;
+}
+.btn-link::before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -1;
+    border: 1px solid var(--secondary-color);
+    transition: all .2s ease-in-out;
+    width: calc(100% - 10px);
+    height: calc(100% + 12px);
+    left: 5px;
+    top: -6px;
+    -webkit-tap-highlight-color: transparent;
+}
+.btn-link.np::before {
+    display: none;
+}
+.btn-link.t-w { 
+    color: var(--accent-color); 
+    border-color: var(--white);
+    background-color: var(--primary-color);
+    -webkit-tap-highlight-color: transparent;
+}
+.btn-link.t-w::before {
+    border-color: var(--white);
+    -webkit-tap-highlight-color: transparent;
+}
+.btn-link.t-d { 
+    color: var(--white);
+    border-color: var(--secondary-color);
+    background-color: var(--primary-color);
+    -webkit-tap-highlight-color: transparent;
+}
+.btn-link.t-d::before {
+    border-color: var(--secondary-color);
+    -webkit-tap-highlight-color: transparent;
+}
+.btn-link.fw-b { font-weight: 700; }
+.btn-link:hover, .btn-link:focus, .btn-link:active { 
+    color: var(--white); 
+    background-color: var(--primary-color)!important;
+    border-color: var(--primary-color);
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+.btn-link.t-w:hover, .btn-link.t-w:focus, .btn-link.t-w:active {
+    color: var(--primary-color);
+    background-color: var(--white)!important;
+    border-color: var(--white);
+    -webkit-tap-highlight-color: transparent;
+}
+.btn-link.t-d:hover, .btn-link.t-d:focus, .btn-link.t-d:active {
+    color: var(--primary-color);
+    background-color: var(--white)!important;
+    -webkit-tap-highlight-color: transparent;
+}
+
 /*
  * Default WP Alignment Classes
  *****************************************************************************/
@@ -507,6 +588,11 @@ a:hover {
     text-decoration: none;
     color: var(--secondary-color);
 }
+.ovl-blockmenu  li a:hover,
+.ovl-blockmenu  li a:focus {
+  opacity: 1;
+  color: var(--secondary-color);
+}
 .ovl-close {
     border: none;
     background: url('assets/images/ic-close-w.svg') center / 100% auto no-repeat;
@@ -560,7 +646,7 @@ a:hover {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 .admin-bar #masthead {
-	top: 30px;
+    top: 30px;
 }
 #masthead .container {
     max-width: 1900px;
@@ -985,7 +1071,7 @@ address a {
     width: auto;
 }
 .bnr-txt p { margin-top: 20px; }
-.bnr-content .link-btn {
+.bnr-content .link-btn, .bnr-content .btn-link {
     position: absolute;
     z-index: 0;
     right: 100px;
@@ -1005,7 +1091,7 @@ address a {
 #featured {
     padding: 150px 0;
 }
-.feat-txt .link-btn {
+.feat-txt .link-btn, .feat-txt .btn-link {
     margin: 0 30px 30px 0;
 }
 .slick-prev {
@@ -1064,9 +1150,9 @@ section .maxwrap {
     z-index: 0;
 }
 .wmark-img {
-	padding-left: 16%;
-	padding-bottom: 20px;
-	margin-top: -22%;
+    padding-left: 16%;
+    padding-bottom: 20px;
+    margin-top: -22%;
 }
 .wmark-img img { max-width: 160%; }
 .feat-txt::before {
@@ -1340,7 +1426,7 @@ section .maxwrap {
 .sec-action {
     padding: 50px 0 0;
 }
-#connect .sec-action .link-btn {
+#connect .sec-action .link-btn,  #connect .sec-action .btn-link {
     margin: 0 auto 20px;
 }
 .cont-block {
@@ -1953,7 +2039,12 @@ section .maxwrap {
         min-width: 200px;
         font-size: 1.3rem;
     }
-    .bnr-content .link-btn {
+    .btn-link {
+        min-height: 54px;
+        min-width: 220px;
+        font-size: 1.3rem;
+    }
+    .bnr-content .link-btn, .bnr-content .btn-link {
         right: 50px;
         margin-top: 10px;
     }
@@ -2076,8 +2167,8 @@ section .maxwrap {
     .sec-wide { padding: 80px 0; }
     .tab-content { margin-top: 40px; }
     .sec-locate .cont-block { margin-bottom: 70px; }
-	.wmark-img { padding: 0;}
-	.wmark-img img { max-width: 100%;}
+    .wmark-img { padding: 0;}
+    .wmark-img img { max-width: 100%;}
     section .maxwrap { max-width: 1200px; }
     .ovlnav-wrap { padding: 20px 40px; }
     .ovl-logo img { max-width: 55%; }
@@ -2137,7 +2228,7 @@ section .maxwrap {
     .ovl-menu { width: 430px; }
     .ovl-blockmenu { justify-content: space-between; }
     .ovl-blockmenu > li { width: auto; }
-	.bnr-form { bottom: 25%; }
+    .bnr-form { bottom: 25%; }
 }
 @media only screen and (max-width: 1280px) {
     :root {
@@ -2170,7 +2261,7 @@ section .maxwrap {
         right: 0;
         padding: 15px 20px 25px 20px;
     }
-    .bnr-content .link-btn {
+    .bnr-content .link-btn, .bnr-content .btn-link {
         right: 10px;
     }
     .bnr-slider .slick-arrow {
@@ -2234,7 +2325,7 @@ section .maxwrap {
         bottom: 0;
     }
     .bnr-content::before { display: none; }
-    .bnr-content .link-btn {
+    .bnr-content .link-btn, .bnr-content .btn-link {
         position: relative;
         transform: none;
         right: 0;
@@ -2254,13 +2345,17 @@ section .maxwrap {
         min-height: 50px;
         min-width: 200px;
     }
+    .btn-link {
+        min-height: 44px;
+        min-width: 200px;
+    }
     #featured {
         padding: 60px 0 70px;
     }
     .feat-txt {
         padding: 0 0 30px;
     }
-	.wmark-img { margin: 0;}
+    .wmark-img { margin: 0;}
     .feat-txt::before {
         position: static;
         width: 100%;
@@ -2385,8 +2480,11 @@ section .maxwrap {
         height: 100%;
     }
     .bnr-home { height: 100%; }
-	.admin-bar #masthead {
+    .admin-bar #masthead {
         top: 45px;
+    }
+    .btn-link, .btn-link::before, .link-btn, .link-btn::before, .link-btn::after {
+        transition: none!important;
     }
 }
 @media only screen and (max-width: 767px) {
@@ -2468,7 +2566,7 @@ section .maxwrap {
     .glry-grid {
         padding: 0 25px;
     }
-    .feat-txt .link-btn {
+    .feat-txt .link-btn, .feat-txt .btn-link {
         margin: 0 auto 30px;
         max-width: 200px;
         display: flex;
@@ -2481,16 +2579,21 @@ section .maxwrap {
         flex-direction: column;
     }
     .ovl-blockmenu > li:first-child a {
-        display: inline-block;
+        /*display: inline-block;*/
         margin-bottom: 20px;
     }
     .bnr-form {
         margin: 60px auto 220px;
     }
-	#colophon { text-align: center;}
-	#colophon a.home-link {
-		margin: 0 auto;
-	}
+    #colophon { text-align: center;}
+    #colophon a.home-link {
+        margin: 0 auto;
+    }
+    .gallery-slider .slick-arrow {
+        top: auto;
+        margin-top: 0;
+        bottom: 30px;
+    }
 }
 @media only screen and (max-width: 639px) {
     .bnr-content h1, .bnr-content h2, .bnr-content h3 {
@@ -2501,7 +2604,7 @@ section .maxwrap {
         font-size: 1.9rem;
         padding: 10px 20px 25px;
     }
-    .bnr-content .link-btn {
+    .bnr-content .link-btn, .bnr-content .btn-link {
         margin-top: 20px;
     }
     #featured {
@@ -2546,7 +2649,7 @@ section .maxwrap {
     .sec-action {
         flex-direction: column;
     }
-    .sec-action .link-btn {
+    .sec-action .link-btn, .sec-action .btn-link {
         margin: 0 auto 20px;
     }
     .cont-col {

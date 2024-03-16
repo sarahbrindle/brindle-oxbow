@@ -15,7 +15,7 @@ if($module['buttons']){
   <?php if ($no_buttons > 0) { ?>
           <div class="sec-action d-f jc-se">
                 <?php foreach($buttons as $button) { ?>
-                    <?php get_template_part('partials/button', null, array('button' => $button['link'],'class_alt' => 'link-btn '.$button['class'], 'has_arrow' => false)); ?>
+                    <?php get_template_part('partials/button', null, array('button' => $button['link'],'class_alt' => 'btn-link '.$button['class'], 'has_arrow' => false)); ?>
                 <?php } ?>            
           </div>
         <?php } ?>
