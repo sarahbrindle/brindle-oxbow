@@ -51,9 +51,6 @@ if($module['buttons']){
 
 <?php } ?>
 
-
-
-
 <!-- Site Footer Starts -->
   <footer id="colophon">
     <div class="container">
@@ -70,6 +67,18 @@ if($module['buttons']){
               <address>
                 <?=$footer['contact_address']?>
               </address>
+              <?php if($footer['footer_icon']){                  
+              ?>
+                <p>
+                <?php foreach ($footer['footer_icon'] as $item) { 
+                    $button = $item['url'];
+                ?>
+                    <a <?php if (isset($button['target'])){ if ($button['target']){ echo 'target="_blank"'; }}?> href="<?=$button['url']?>" class="ic-social" style="background-image: url(<?=$item['icon']['url']?>);" target="_blank"><?=$item['label']?></a>
+                <?php }?>  
+                </p>   
+              <?php }?>  
+
+				
             </div>
             <div class="fmenu">
               <h6><?=$footer['menu_title']?></h6>
