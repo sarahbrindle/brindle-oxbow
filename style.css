@@ -555,7 +555,6 @@ a:hover {
 }
 .ovl-logo img {
     width: 100%;
-    max-width: 650px;
     filter: grayscale(100%);
 }
 .ovl-menu {
@@ -670,7 +669,7 @@ a:hover {
 }
 .hmain::after { display: none; }
 .brand {
-    width: 200px;
+    width: auto;
     flex-shrink: 0;
 }
 .hside {
@@ -1027,7 +1026,7 @@ address a {
 #colophon .home-link img {
     width: auto;
     min-width: 100px;
-    max-width: 300px;
+    max-width: 100%;
 }
 .ic-social {
     display: inline-block;
@@ -1550,6 +1549,8 @@ section .maxwrap {
     position: relative;
     z-index: 0;
     background: center / cover no-repeat;
+	max-height: 20vw;
+	overflow: hidden;
 }
 .bnrbox::before, .bnrbox::after {
     content: '';
@@ -2265,9 +2266,6 @@ section .maxwrap {
     .container {
         max-width: 100%;
     }
-    .brand {
-        width: 175px;
-    }
     .navmenu > li > a {
         padding: 10px 10px;
     }
@@ -2484,8 +2482,8 @@ section .maxwrap {
         flex-grow: 0;
     }
     .ovl-logo img {
-        width: 200px;
-        max-width: 100%;
+        max-width: calc(100% - 60px)!important;
+		max-height: 50px;
     }
     .ovl-menu { width: 100%; max-width: 450px; }
     .bnr-slider {
@@ -2586,7 +2584,7 @@ section .maxwrap {
     }
     a.home-link {
         display: inline-block;
-        width: 220px;
+        width: auto;
     }
     .sec-features .container {
         max-width: 100%;
@@ -2722,8 +2720,10 @@ section .maxwrap {
         width: 100%;
         max-width: calc(100% - 30px);
     }
-
+	.brand {
+		max-width: calc(100% - 60px)!important;
+	}
 }
 @media only screen and (max-height: 370px) {
-    
+	
 }
