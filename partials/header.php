@@ -2,6 +2,9 @@
     global $post;
     $currentPostId = $post->ID; 
     $logo = get_field('logo', 'options'); 
+	$logo_width = get_field('logo_max_width', 'options');
+	$menu_logo = get_field('menu_logo', 'options'); 
+	$menu_logo_width = get_field('menu_logo_max-width', 'options');
     $hamburg_menu_disabled_pages = array(); 
     if(get_field('hamburg_menu_disabled_pages', 'options')){
       $hamburg_menu_disabled_pages = get_field('hamburg_menu_disabled_pages', 'options'); 
@@ -14,7 +17,7 @@
     <div class="container hmain">
 
       <?php if($logo){?>
-          <a href="<?php echo home_url(); ?>" class="brand"><img src="<?=$logo['url']?>" alt="<?=$logo['alt']?>" class="header-logo" /></a>
+          <a href="<?php echo home_url(); ?>" class="brand" <?php if($logo_width) { echo 'style="max-width:' . $logo_width . 'px"'; } ?>><img src="<?=$logo['url']?>" alt="<?=$logo['alt']?>" class="header-logo" /></a>
       <?php }?>
 
       <div class="hside">
@@ -126,9 +129,10 @@
       <div class="ovl-logo">
 
         <?php 
+		  $hdata = get_field('header', 'options');
           $fdata = get_field('footer', 'options');
         ?>
-        <img src="<?=$fdata['logo']['url']?>" alt="<?=$fdata['logo']['alt']?>">
+        <img src="<?=$menu_logo['url']?>" alt="<?=$menu_logo['alt']?>" <?php if($menu_logo_width) { echo 'style="max-width:' . $menu_logo_width . 'px;"'; } ?>>
 
       </div>
 

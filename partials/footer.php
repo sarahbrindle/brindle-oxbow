@@ -57,7 +57,7 @@ if($module['buttons']){
       <div class="row">
         <div class="col-lg-4 d-f ai-c">
             <?php if ($footer['logo']) { ?>
-                  <a href="<?php echo home_url(); ?>" class="home-link"><img src="<?=$footer['logo']['url']?>" alt="<?=$footer['logo']['alt']?>" /></a>
+                  <a href="<?php echo home_url(); ?>" class="home-link" <?php if($footer['logo_max_width']) { echo 'style="max-width:' . $footer['logo_max_width'] . 'px;"'; } ?>><img src="<?=$footer['logo']['url']?>" alt="<?=$footer['logo']['alt']?>" /></a>
               <?php } ?>
         </div>
         <div class="col-lg-8">
