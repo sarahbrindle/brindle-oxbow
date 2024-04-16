@@ -6,8 +6,8 @@ Author: Brindle Digital
 Author URI: https://www.brindledigital.com/
 GitHub Theme URI: https://github.com/sarahbrindle/brindle-oxbow
 GitHub Branch:    master
-Version: v1.0.0.09
-Date:            11-04-2024
+Version: v1.0.0.10
+Date:            16-04-2024
 Requires at least: 5.0
 Tested up to: 5.7
 Requires PHP: 7.0
@@ -1817,7 +1817,12 @@ section .maxwrap {
   display: block;
   clear: both;
 }
-
+.single-floorplans-container-outer{
+    margin-top:125px !important;
+}
+.single-floorplans-container-outer h1{
+    color: var(--base-2);
+}
 /*Floorplan Tab End*/
 
 /*Text banner start*/
