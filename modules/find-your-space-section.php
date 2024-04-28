@@ -1,5 +1,12 @@
+<?php
+$sec_module = $args['module'];
+$show_section = $sec_module['display_section'];
+$book_a_tour = get_field('find_your_perfect_space', 'options');
+?>
+<?php if ($show_section) { ?>
+
 <?php 
-$module = $args['module']; 
+$module = $book_a_tour; 
 $no_buttons = 0;
 if($module['buttons']){
     $buttons = $module['buttons'];
@@ -7,7 +14,7 @@ if($module['buttons']){
 }
 ?>
 <section id="connect" <?php if($module['background']){?> style="background-image: url(<?=$module['background']['url']?>);" <?php }?>>
-  <div class="layer">
+<div class="layer">
   <div class="container">
         <div class="cnct-wrap">
           <?=$module['editor']?>   
@@ -22,6 +29,7 @@ if($module['buttons']){
   </div>
   <?php if($module['scroll_items']){?>
       <div class="wide-label">
+
         <div class="scroll-track">
             <?php if($module['scroll_items']){foreach ($module['scroll_items'] as $item) { ?>
             <div>
@@ -29,7 +37,10 @@ if($module['buttons']){
             </div>
           <?php }}?>            
         </div>
+
       </div>
-  <?php }?>
+  <?php } ?>
 </div>
 </section>
+
+<?php } ?>
