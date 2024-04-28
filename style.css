@@ -6,8 +6,8 @@ Author: Brindle Digital
 Author URI: https://www.brindledigital.com/
 GitHub Theme URI: https://github.com/sarahbrindle/brindle-oxbow
 GitHub Branch:    master
-Version: v1.0.0.10
-Date:            16-04-2024
+Version: v1.0.0.11
+Date:            28-04-2024
 Requires at least: 5.0
 Tested up to: 5.7
 Requires PHP: 7.0
@@ -1320,6 +1320,11 @@ section .maxwrap {
     z-index: 0;
     margin: 0 0 20px;
 }
+.img-thumb {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .img-title {
     text-transform: uppercase;
     font-style: normal;
@@ -1652,6 +1657,9 @@ section .maxwrap {
     font-style: italic;
     color: var(--white);
     background: center / cover no-repeat;
+}
+.glry-card > a:hover {
+    color: var(--white);
 }
 .mw-13 {
     max-width: 1376px;
