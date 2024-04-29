@@ -1,12 +1,14 @@
 <?php 
 $module = $args['module']; 
+$book_a_tour = get_field('find_your_perfect_space', 'options');
+$ct_module = $book_a_tour; 
 $no_buttons = 0;
-if($module['buttons']){
-    $buttons = $module['buttons'];
+if($ct_module['buttons']){
+    $buttons = $ct_module['buttons'];
     $no_buttons = count($buttons);
 }
 ?>
-<section class="sec-features mt120" <?php if($module['background']){?> style="background-image: url(<?=$module['background']['url']?>)" <?php }?>>
+<section class="sec-features mt120" <?php if($ct_module['background']){?> style="background-image: url(<?=$ct_module['background']['url']?>)" <?php }?>>
   <div class="layer">
       
       <div class="glry-grid">
@@ -38,7 +40,7 @@ if($module['buttons']){
 
       <div class="container">
         <div class="cnct-wrap">
-          <?=$module['editor']?>
+          <?=$ct_module['editor']?>
           
 
          
@@ -56,10 +58,10 @@ if($module['buttons']){
         </div>
       </div>
 
-      <?php if($module['scroll_items']){?>
+      <?php if($ct_module['scroll_items']){?>
       <div class="wide-label">
         <div class="scroll-track">
-            <?php if($module['scroll_items']){foreach ($module['scroll_items'] as $item) { ?>
+            <?php if($ct_module['scroll_items']){foreach ($ct_module['scroll_items'] as $item) { ?>
             <div>
               <div class="scrlabel"><?php echo $item['item'];?></div>
             </div>
