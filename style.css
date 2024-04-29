@@ -1657,6 +1657,8 @@ section .maxwrap {
     font-style: italic;
     color: var(--white);
     background: center / cover no-repeat;
+    padding: 15px;
+    text-align: center;
 }
 .glry-card > a:hover {
     color: var(--white);
