@@ -6,8 +6,8 @@ Author: Brindle Digital
 Author URI: https://www.brindledigital.com/
 GitHub Theme URI: https://github.com/sarahbrindle/brindle-oxbow
 GitHub Branch:    master
-Version: v1.0.0.11
-Date:            28-04-2024
+Version: v1.0.0.12
+Date:            30-04-2024
 Requires at least: 5.0
 Tested up to: 5.7
 Requires PHP: 7.0
@@ -1905,6 +1905,7 @@ section .maxwrap {
 .cont-form .gform-theme--foundation .gfield.gfield--type-checkbox {
     padding-bottom: 10px!important;
 }
+/*
 .cont-form .gform_button {
     display: inline-flex!important;
     align-items: center!important;
@@ -1923,9 +1924,40 @@ section .maxwrap {
     background: url('assets/images/btn-bg.svg') center / 100% auto no-repeat!important;
 }
 .cont-form .gform_button:hover, .cont-form .gform_button:focus, .cont-form .gform_button:active {
-    background: url('assets/images/btn-hover.svg') center / 100% auto no-repeat!important;
+    background: url('assets/images/btn-bg.svg'), var(--primary-color) center / 100% auto no-repeat!important;
     color: var(--white) !important;
 }
+*/
+/*Contact Form Button*/
+.cont-form .gform_button {
+    display: inline-flex!important;
+    align-items: center!important;
+    justify-content: center!important;
+    min-width: 250px!important;
+    min-height: 75px!important;
+    font-size: 1.4rem!important;
+    font-weight: 400!important;
+    color: var(--white)!important;
+    text-transform: uppercase!important;
+    padding: 0 15px!important;
+    position: relative!important;
+    z-index: 0!important;
+    letter-spacing: 3.64px!important;
+    box-shadow: none!important;   
+    background: var(--primary-color)!important;
+    border: 1px solid var(--primary-color)!important;
+}
+
+
+
+.cont-form .gform_button:hover, .cont-form .gform_button:focus, .cont-form .gform_button:active {
+     background-color: var(--white)!important;
+    border-color: var(--secondary-color)!important;
+    color: var(--primary-color)!important;
+}
+/*Contact Form Button End*/
+
+
 .loc-map ul.na-attractions-categories-wrap {
     list-style: none;
     padding: 0;
@@ -1933,7 +1965,7 @@ section .maxwrap {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: var(--accent-color);;
+    background: var(--accent-color);
 }
 .loc-map ul.na-attractions-categories-wrap > li {
     width: 33.3333%;
@@ -1992,8 +2024,9 @@ section .maxwrap {
     min-width: 200px!important;
     min-height: 65px!important;
 }
+
 .gform_button:hover, .gform_button:focus, .gform_button:active {
-    background: url('assets/images/btn-hover.svg') center / 100% auto no-repeat!important;
+   /* background: url('assets/images/btn-hover.svg') center / 100% auto no-repeat!important;*/
     color: var(--white)!important;
 }
 .gform_previous_button {
