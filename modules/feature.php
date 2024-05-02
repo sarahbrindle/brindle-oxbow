@@ -34,11 +34,14 @@
                                   if($image['link']){
                                     $button = $image['link'];
                                   }
+                                  $imgTitle = $image['link']['title'];
+                                  $imgTitle = str_replace('<br>',"<br>",$imgTitle);
+                                  $imgTitle = str_replace('\n',"<br>",$imgTitle);
                               ?>
                               <div>
                                 <a <?php if (isset($button['target'])){ if ($button['target']){ echo 'target="_blank"'; }}?> <?php if($image['link']){?> href="<?=$image['link']['url']?>" <?php }?> class="img-block">
                                   <span class="img-thumb" <?php if (isset($image['photo'])){ if ($image['photo']){ ?> style="background-image: url('<?=$image['photo']['url']?>');" <?php }}?> >
-                                        <?php if($image['link']){?><span class="view-txt"><?=$image['link']['title']?></span><?php }?>
+                                        <?php if($image['link']){?><span class="view-txt"><?php echo $imgTitle;?></span><?php }?>
                                   </span>
                                   <em class="img-title"><?=$image['title']?></em>
                                 </a>
