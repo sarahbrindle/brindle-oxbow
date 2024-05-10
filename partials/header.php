@@ -132,7 +132,9 @@
 		  $hdata = get_field('header', 'options');
           $fdata = get_field('footer', 'options');
         ?>
-        <img src="<?=$menu_logo['url']?>" alt="<?=$menu_logo['alt']?>" <?php if($menu_logo_width) { echo 'style="max-width:' . $menu_logo_width . 'px;"'; } ?>>
+        <a href="<?php echo home_url(); ?>" class="hamberg_brand">
+            <img src="<?=$menu_logo['url']?>" alt="<?=$menu_logo['alt']?>" <?php if($menu_logo_width) { echo 'style="max-width:' . $menu_logo_width . 'px;"'; } ?>>
+        </a>
 
       </div>
 
