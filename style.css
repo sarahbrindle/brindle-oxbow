@@ -6,8 +6,8 @@ Author: Brindle Digital
 Author URI: https://www.brindledigital.com/
 GitHub Theme URI: https://github.com/sarahbrindle/brindle-oxbow
 GitHub Branch:    master
-Version: v1.0.0.12
-Date:            30-04-2024
+Version: v1.0.0.13
+Date:            10-05-2024
 Requires at least: 5.0
 Tested up to: 5.7
 Requires PHP: 7.0
@@ -2532,10 +2532,14 @@ section .maxwrap {
         padding-bottom: 25px;
         margin-top: 10px;
         flex-grow: 0;
-    }
-    .ovl-logo img {
         max-width: calc(100% - 60px)!important;
+        object-fit: contain;
+    }
+    .ovl-logo img {        
 		max-height: 50px;
+        width: auto;
+        height: auto;
+        object-fit: contain;
     }
     .ovl-menu { width: 100%; max-width: 450px; }
     .bnr-slider {
