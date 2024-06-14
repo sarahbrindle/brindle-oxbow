@@ -13,6 +13,8 @@ add_theme_support('soil', [
     'relative-urls'
 ]);
 
+//Meta support
+add_theme_support( 'title-tag' );
 
 
 // Remove editor from pages and posts as we'll be using ACF for everything
@@ -162,3 +164,12 @@ function wd_nav_menus_load( $field ) {
      return $field;
 
 }
+
+// remove dashicons in frontend to non-admin 
+function wpdocs_dequeue_dashicon() {
+    if (current_user_can( 'update_core' )) {
+        return;
+    }
+    wp_deregister_style('dashicons');
+}
+add_action( 'wp_enqueue_scripts', 'wpdocs_dequeue_dashicon' );

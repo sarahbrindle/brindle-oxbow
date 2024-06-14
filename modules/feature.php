@@ -18,7 +18,7 @@
 						            <img src="<?php echo $module['water_mark']['url'];?>" alt="<?php echo $module['water_mark']['title'];?>">
                       <?php }?>                      
 					         </div>
-                    <?php get_template_part('partials/copy', null, array('copy' => $module['copy'], 'class' => 'hero-subtitle')); ?>
+                    <p><?php echo $module['copy'];?></p>                    
                     <?php get_template_part('partials/button', null, array('button' => $module['link'],'class_alt' => 'btn-link', 'has_arrow' => false)); ?>
                   </div>
 

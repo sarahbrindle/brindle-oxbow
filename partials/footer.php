@@ -19,7 +19,7 @@ if($module['buttons']){
     $no_buttons = count($buttons);
 }
 ?>
-<section id="connect" <?php if($module['background']){?> style="background-image: url(<?=$module['background']['url']?>);" <?php }?>>
+<section id="connect" <?php if (isset($module['background'])) { ?> <?php if($module['background']){?> style="background-image: url(<?=$module['background']['url']?>);" <?php }}?>>
 <div class="layer">
   <div class="container">
         <div class="cnct-wrap">
@@ -33,6 +33,7 @@ if($module['buttons']){
               <?php } ?>
         </div>
   </div>
+  <?php if (isset($module['scroll_items'])) { ?>
   <?php if($module['scroll_items']){?>
       <div class="wide-label">
 
@@ -45,7 +46,7 @@ if($module['buttons']){
         </div>
 
       </div>
-  <?php } ?>
+  <?php }} ?>
 </div>
 </section>
 
@@ -56,45 +57,54 @@ if($module['buttons']){
     <div class="container">
       <div class="row">
         <div class="col-lg-4 d-f ai-c">
-            <?php if ($footer['logo']) { ?>
+          <?php if (isset($footer['logo'])) { ?>
+              <?php if ($footer['logo']) { ?>
                   <a href="<?php echo home_url(); ?>" class="home-link" <?php if($footer['logo_max_width']) { echo 'style="max-width:' . $footer['logo_max_width'] . 'px;"'; } ?>><img src="<?=$footer['logo']['url']?>" alt="<?=$footer['logo']['alt']?>" /></a>
-              <?php } ?>
+              <?php }} ?>
         </div>
         <div class="col-lg-8">
           <div class="fgroup">
             <div class="fmenu">
+              <?php if (isset($footer['contact_section_title'])) { ?>
               <h6><?=$footer['contact_section_title']?></h6>
+              <?php }?>
               <address>
                 <?=$footer['contact_address']?>
               </address>
-              <?php if($footer['footer_icon']){                  
+              <?php if(isset($footer['footer_icon'])){                  
               ?>
                 <p>
-                <?php foreach ($footer['footer_icon'] as $item) { 
+                <?php if(isset($footer['footer_icon'])){foreach ($footer['footer_icon'] as $item) { 
+                  if(isset($item['url'])){
                     $button = $item['url'];
                 ?>
-                    <a <?php if (isset($button['target'])){ if ($button['target']){ echo 'target="_blank"'; }}?> href="<?=$button['url']?>" class="ic-social" style="background-image: url(<?=$item['icon']['url']?>);" target="_blank"><?=$item['label']?></a>
-                <?php }?>  
+                    <a <?php if (isset($button['target'])){ if ($button['target']){ echo 'target="_blank"'; }}?> <?php if (isset($button['url'])){?> href="<?=$button['url']?>" <?php }?> class="ic-social" <?php if (isset($item['icon'])){?> style="background-image: url(<?=$item['icon']['url']?>);" <?php }?> target="_blank"><?php if (isset($item['label'])){?><?=$item['label']?><?php }?></a>
+                <?php }}}?>  
                 </p>   
               <?php }?>  
 
 				
             </div>
             <div class="fmenu">
-              <h6><?=$footer['menu_title']?></h6>
+              <?php if (isset($footer['menu_title'])) { ?>
+                  <h6><?=$footer['menu_title']?></h6>
+              <?php }?>
               <?php wp_nav_menu(array('theme_location' => 'footer-menu')); ?>
             </div>            
             <div class="fmenu">
-              <h6><?=$footer['link_section_title']?></h6>
+              <?php if (isset($footer['link_section_title'])) { ?>
+                  <h6><?=$footer['link_section_title']?></h6>
+              <?php }?>
               <?php wp_nav_menu(array('theme_location' => 'link-menu')); ?>
               <p>                
                 <?php
+                if (isset($footer['buttons'])) {
                 if($footer['buttons']){
                  foreach ($footer['buttons'] as $icons) { ?>
-                          
-                          <?php get_template_part('partials/button', null, array('button' => $icons['link'],'class_alt' => 'link-btn t-w', 'has_arrow' => false)); ?>
-                
-                <?php }} ?>
+                          <?php if (isset($icons['link'])) { ?>
+                              <?php get_template_part('partials/button', null, array('button' => $icons['link'],'class_alt' => 'link-btn t-w', 'has_arrow' => false)); ?>
+                          <?php }?>
+                <?php }}} ?>
               </p>
             </div>
           </div>
@@ -103,16 +113,18 @@ if($module['buttons']){
 
       <div class="foot-info">
         <div class="credits">
+          <?php if (isset($footer['copyright'])) { ?>
           <?php if ($footer['copyright']) { ?>
-          <p>
-              <?php
-              $copyright = $footer['copyright'];
-              $copyright = str_replace('{YEAR}', date('Y'), $copyright);
-              echo $copyright;
-              ?>            
-          </p>
-          <?php }?>
+              <p>
+                  <?php
+                  $copyright = $footer['copyright'];
+                  $copyright = str_replace('{YEAR}', date('Y'), $copyright);
+                  echo $copyright;
+                  ?>            
+              </p>
+          <?php }}?>
           <?php
+          if (isset($footer['icons'])) { 
           if($footer['icons']){
           ?>
           <p class="fconnect">
@@ -129,11 +141,12 @@ if($module['buttons']){
               
               <?php }?>
           </p>
-          <?php } ?>          
+          <?php }} ?>          
         </div>
 
         <div class="finfo-links">
             <?php 
+            if (isset($footer['designer'])) { 
             if($footer['designer']){
             foreach ($footer['designer'] as $icons) { ?>
                 <?php if ($icons['designer_link'] != "") { ?>
@@ -141,7 +154,7 @@ if($module['buttons']){
                 <?php } ?> 
                 <img src="<?php echo $icons['designer_icon']['url']; ?>" alt="<?php echo $icons['designer_icon']['alt']; ?>" />
                 <?php if ($icons['designer_link'] != "") { ?></a><?php } ?> 
-            <?php }} ?>
+            <?php }}} ?>
         </div>
       </div>
     </div>
