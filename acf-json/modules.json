@@ -107,6 +107,31 @@
                                 "id": ""
                             },
                             "return_format": "array"
+                        },
+                        {
+                            "key": "field_6663173a7bcd1",
+                            "label": "Mobile Banner",
+                            "name": "mobile_banner",
+                            "aria-label": "",
+                            "type": "image",
+                            "instructions": "Please upload a 499 width and 599 height optimized image in webp format\r\nPlease upload only optimized image for better score on google for mobile",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": "",
+                            "preview_size": "medium"
                         }
                     ],
                     "min": "",
@@ -1449,7 +1474,7 @@
                 "layout_65d5bf03df0e5": {
                     "key": "layout_65d5bf03df0e5",
                     "name": "meow_gallery",
-                    "label": "Gallery",
+                    "label": "Gallery with shortcode",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -1998,5 +2023,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1714406213
+    "modified": 1718301227
 }

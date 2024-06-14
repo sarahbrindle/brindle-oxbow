@@ -69,7 +69,7 @@
     </style>
     <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri();?>/assets/css/aos.css">
   <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri();?>/assets/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri();?>/style.css">
+  <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri();?>/style.min.css">
 </head>
 <body <?php body_class(); ?>>
     <div id="global">

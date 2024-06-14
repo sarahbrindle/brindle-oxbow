@@ -17,7 +17,7 @@
     <div class="container hmain">
 
       <?php if($logo){?>
-          <a href="<?php echo home_url(); ?>" class="brand" <?php if($logo_width) { echo 'style="max-width:' . $logo_width . 'px"'; } ?>><img src="<?=$logo['url']?>" alt="<?=$logo['alt']?>" class="header-logo" /></a>
+          <a aria-label="Please visit home page" href="<?php echo home_url(); ?>" class="brand" <?php if($logo_width) { echo 'style="max-width:' . $logo_width . 'px"'; } ?>><img src="<?=$logo['url']?>" alt="<?=$logo['alt']?>" class="header-logo" /></a>
       <?php }?>
 
       <div class="hside">
@@ -28,7 +28,6 @@
                   <?php
                       $menu_name = 'header-menu';
                       $array_menu = wp_get_nav_menu_items($menu_name);
-                      // print_r($array_menu);exit;
                       foreach ($array_menu as $navItem ) {
                           $page_id = $navItem->object_id;
                           $target = $navItem->target;
@@ -95,10 +94,9 @@
 
                         }
                         ?> 
-              </ul>  
-                <?php //wp_nav_menu(array('theme_location' => 'header-menu','menu_class'=> "navmenu",'menu_id'=> "navmenu")); ?>
+              </ul> 
               </nav>
-              <button id="navtoggle" class="btn-menu">
+              <button id="navtoggle" class="btn-menu" aria-label="hamname" title="HambergTitle">
                 <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
               </button>
         <?php }else{?>
