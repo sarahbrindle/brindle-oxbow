@@ -6,8 +6,8 @@ Author: Brindle Digital
 Author URI: https://www.brindledigital.com/
 GitHub Theme URI: https://github.com/sarahbrindle/brindle-oxbow
 GitHub Branch:    master
-Version: v1.0.0.14
-Date:            14-06-2024
+Version: v1.0.0.15
+Date:            24-07-2024
 Requires at least: 5.0
 Tested up to: 5.7
 Requires PHP: 7.0
@@ -348,7 +348,7 @@ a:hover {
     top: 0;
 }
 .link-btn.t-w::before, .link-btn.t-w::after { border-color: var(--white); }
-.link-btn.t-w:hover { color: var(--primary-color); }
+.link-btn.t-w:hover { color: var(--primary-color) !important; }
 .link-btn:hover::before,.link-btn:active::before,.link-btn:focus::before {
     background-color: var(--primary-color);
     border-color: var(--primary-color);
@@ -521,7 +521,7 @@ a:hover {
 .overlay-menu li a:hover,
 .overlay-menu li a:focus {
   opacity: 1;
-  color: var(--secondary-color);
+  color: var(--accent-color);
 }
 
 .overlay-menu li a.others-hovered {
@@ -852,9 +852,9 @@ a:hover {
     width: 100%;
     position: relative;
     z-index: 0;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
 }
 .sub-menu-grid > li > a > span {
     position: absolute;
