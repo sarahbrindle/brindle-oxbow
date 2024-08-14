@@ -65,9 +65,9 @@ if($module['buttons']){
         <div class="col-lg-8">
           <div class="fgroup">
             <div class="fmenu">
-              <?php if (isset($footer['contact_section_title'])) { ?>
+              <?php if (isset($footer['contact_section_title'])) { if ($footer['contact_section_title'] !="") { ?>
               <h6><?=$footer['contact_section_title']?></h6>
-              <?php }?>
+              <?php }}?>
               <address>
                 <?=$footer['contact_address']?>
               </address>
@@ -86,15 +86,15 @@ if($module['buttons']){
 				
             </div>
             <div class="fmenu">
-              <?php if (isset($footer['menu_title'])) { ?>
+              <?php if (isset($footer['menu_title'])) { if ($footer['menu_title'] !='') { ?>
                   <h6><?=$footer['menu_title']?></h6>
-              <?php }?>
+              <?php }}?>
               <?php wp_nav_menu(array('theme_location' => 'footer-menu')); ?>
             </div>            
             <div class="fmenu">
-              <?php if (isset($footer['link_section_title'])) { ?>
+              <?php if (isset($footer['link_section_title'])) { if ($footer['link_section_title'] !='') { ?>
                   <h6><?=$footer['link_section_title']?></h6>
-              <?php }?>
+              <?php }}?>
               <?php wp_nav_menu(array('theme_location' => 'link-menu')); ?>
               <p>                
                 <?php

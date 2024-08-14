@@ -6,8 +6,8 @@ Author: Brindle Digital
 Author URI: https://www.brindledigital.com/
 GitHub Theme URI: https://github.com/sarahbrindle/brindle-oxbow
 GitHub Branch:    master
-Version: v1.0.0.15
-Date:            24-07-2024
+Version: v1.0.0.16
+Date:            14-08-2024
 Requires at least: 5.0
 Tested up to: 5.7
 Requires PHP: 7.0
@@ -2093,6 +2093,9 @@ section .maxwrap {
 .sec-features .layer{
     background-color: var(--background-color); 
 }
+.shortcode_section h2,.shortcode_section h3,.shortcode_section h4,.shortcode_section h5,.shortcode_section h6{
+    padding: 0 0 0.2em;
+  }
 /*== RESPONSIVE ==*/
 @media only screen and (max-height: 950px) {
     .overlay-menu li a {

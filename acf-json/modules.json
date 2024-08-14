@@ -1991,6 +1991,56 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_66bb8df495810": {
+                    "key": "layout_66bb8df495810",
+                    "name": "shortcode_section",
+                    "label": "Shortcode Section",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_66bb8e0f95812",
+                            "label": "Introduction Message",
+                            "name": "introduction_message",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_66bb8e3795813",
+                            "label": "Short code",
+                            "name": "short_code",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -2023,5 +2073,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1718301227
+    "modified": 1723567725
 }
