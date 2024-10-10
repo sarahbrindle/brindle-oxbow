@@ -4,11 +4,12 @@
         
             <div class="maxwrap">
               <div class="row">
-                <div class="col-lg-6">
-                  <span class="catg-tagline"><?=$module['title']?></span>
+                <div class="col-lg-6 feature-tagline">
+                  <?=$module['editor']?>
+                  <!--<span class="catg-tagline"><?=$module['title']?></span>
                   <h2 class="col-title">
                     <?=$module['subtitle']?>
-                  </h2>
+                  </h2>-->
                 </div>
                 <div class="col-lg-6">
 

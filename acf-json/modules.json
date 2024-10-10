@@ -144,11 +144,11 @@
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_65aab7084f570",
-                            "label": "Title",
-                            "name": "title",
+                            "key": "field_67064811aa49c",
+                            "label": "Editor",
+                            "name": "editor",
                             "aria-label": "",
-                            "type": "text",
+                            "type": "wysiwyg",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -157,31 +157,12 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
-                        },
-                        {
-                            "key": "field_65aab7134f571",
-                            "label": "SubTitle",
-                            "name": "subtitle",
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
+                            "default_value": "<h4><em>Luxury Apartments<\/em><\/h4>\r\n<h2>Live-Work Luxury in Northern Colorado<\/h2>",
+                            "allow_in_bindings": 0,
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
                         },
                         {
                             "key": "field_65c09c557f611",
@@ -2073,5 +2054,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1723567725
+    "modified": 1728465873
 }
