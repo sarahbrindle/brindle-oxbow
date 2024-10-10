@@ -9,7 +9,7 @@ if($module['buttons']){
 <section id="gallery" class="sec-gallery" <?php if($module['background']){?> style="background-image: url(<?=$module['background']['url']?>);" <?php }?>>
       <div class="gallery-frame">
             <div class="gf-content">
-                <span class="catg-tagline"><?=$module['title']?></span>
+                <h4 class="catg-tagline"><?=$module['title']?></h4>
                 <h3 class="grid-title">
                   <?=$module['sub_title']?>
                 </h3>

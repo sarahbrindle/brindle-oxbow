@@ -5,13 +5,19 @@
             <a <?php if (isset($button['target'])){ if ($button['target']){ echo 'target="_blank"'; }}?> <?php  if (isset($button['url'])){ if($button['url']){?>  href="<?=$button['url']?>" <?php }}?> class="button <?php  if (isset($args['class_alt'])){ if($args['class_alt']){echo $args['class_alt']; }}?>"><?php  if (isset($button['title'])){ if($button['title']){?><?php echo $button['title'];?><?php }}?>
                 
                 <?php if (isset($args['has_arrow'])){ if ($args['has_arrow']){ ?>
-                <svg width="40.749975px" height="11.045944px" viewBox="0 0 40.749975 11.045944" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                    <g fill-rule="nonzero">
-                        <path d="M40.5303,6.053299 C40.8232,5.760409 40.8232,5.285539 40.5303,4.992639 L35.7574,0.219669 C35.4645,-0.073223 34.9896,-0.073223 34.6967,0.219669 C34.4038,0.512569 34.4038,0.987439 34.6967,1.280329 L38.9393,5.522969 L34.6967,9.765569 C34.4038,10.058469 34.4038,10.533369 34.6967,10.826269 C34.9896,11.119169 35.4645,11.119169 35.7574,10.826269 L40.5303,6.053299 Z M20,6.272969 L40,6.272969 L40,4.772969 L20,4.772969 L20,6.272969 Z" id="Shape" fill="#396781"></path>
-                        <polygon id="Shape-Copy" fill="#FFFFFF" points="0 6.272969 20 6.272969 20 4.772969 6.5567e-08 4.772969"></polygon>
+                <svg class="svg-right-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="54" height="14" viewBox="0 0 54 14">
+                  <defs>
+                    <clipPath id="clip-path">
+                      <rect id="Button_SVG_Frame_Clip_Content_Mask_" data-name="Button → SVG [Frame Clip Content Mask]" width="54" height="14" transform="translate(1722 4880.11)" fill="none"/>
+                    </clipPath>
+                  </defs>
+                  <g id="Group_3544" data-name="Group 3544" transform="translate(-922.5 -593.61)">
+                    <g id="Group_3495" data-name="Group 3495">
+                      <g id="Button_SVG_Clip_Content_" data-name="Button → SVG (Clip Content)" transform="translate(-799.5 -4286.5)" clip-path="url(#clip-path)">
+                        <path id="Combined-Shape" d="M7.153,0l.691-.689-5.979-6H53.706V-7.66H1.865l5.979-6-.691-.689L.343-7.517,0-7.172l.343.344Z" transform="translate(1775.854 4879.765) rotate(180)" fill="#9a7536"/>
+                      </g>
                     </g>
-                </g>
+                  </g>
                 </svg>
                 <?php }} ?> 
             </a>

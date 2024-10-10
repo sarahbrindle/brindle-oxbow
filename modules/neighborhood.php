@@ -19,9 +19,9 @@
         </div>
 
         <div class="cont-col wscore">
-          <h4 class="col-title">
+          <h3>
             <?php echo $module['title'];?>
-          </h4>
+          </h3>
           <?php if($module['list']){foreach ($module['list'] as $item) { ?>
           <p>
             <strong><?php echo $item['count'];?></strong> <?php echo $item['title'];?>
@@ -29,7 +29,7 @@
           <?php }}?>
           <?php if ($module['link']) { ?>
           <p class="col-action d-f jc-fe">
-            <?php get_template_part('partials/button', null, array('button' => $module['link'],'class_alt' => 'link-text', 'has_arrow' => false)); ?>
+            <?php get_template_part('partials/button', null, array('button' => $module['link'],'class_alt' => 'link-text', 'has_arrow' => true)); ?>
           </p>
           <?php }?>
         </div>

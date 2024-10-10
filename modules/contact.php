@@ -7,9 +7,9 @@
       <div class="cont-col">
         <div class="cont-txt">
 
-          <h4 class="col-title">
+          <h2 class="col-title">
             <?=$module['title']?>
-          </h4>
+          </h2>
           <?=$module['copy']?>
           <?php if($module['photo']){?>
               <div class="cont-img">
