@@ -17,7 +17,8 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_652b34461eefb",
@@ -444,6 +445,26 @@
                             "parent_repeater": "field_65aa80af441be"
                         }
                     ]
+                },
+                {
+                    "key": "field_6728fca944c7d",
+                    "label": "PTSR Statement",
+                    "name": "ptsr_statement",
+                    "aria-label": "",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "default_value": "",
+                    "delay": 0
                 }
             ]
         },
@@ -462,7 +483,8 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_652b33651eef6",
@@ -632,5 +654,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1712026196
+    "modified": 1730739419
 }
