@@ -157,6 +157,15 @@ if($module['buttons']){
             <?php }}} ?>
         </div>
       </div>
+        <?php 
+        if (isset($footer['ptsr_statement']))  {  if ($footer['ptsr_statement'] != "") {
+        ?>
+        <div class="row ptsr-row">        
+        <?php echo $footer['ptsr_statement'];?>      
+        </div>
+        <?php }}?>
+
+
     </div>
   </footer>
   <!-- Site Footer Ends -->
