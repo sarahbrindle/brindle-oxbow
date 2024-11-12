@@ -20,8 +20,12 @@ if($module['buttons']){
           <?=$module['editor']?>   
               <?php if ($no_buttons > 0) { ?>
                   <div class="sec-action d-f jc-se">
-                        <?php foreach($buttons as $button) { ?>
-                            <div class="gf-action-single-outer"><?php get_template_part('partials/button', null, array('button' => $button['link'],'class_alt' => 'link-btn t-w', 'has_arrow' => false)); ?></div>
+                        <?php
+										  $b=0;
+										  foreach($buttons as $button) { 
+									      $b++;
+					    ?>
+                            <div class="gf-action-single-outer"><?php get_template_part('partials/button', null, array('button' => $button['link'],'class_alt' => 'link-btn t-w fyss-'.$b, 'has_arrow' => false)); ?></div>
                         <?php } ?>            
                   </div>
               <?php } ?>
