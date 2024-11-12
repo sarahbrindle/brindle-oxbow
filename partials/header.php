@@ -152,7 +152,7 @@
             <?php }}?>     
           </li>
           <li>
-            <?php get_template_part('partials/button', null, array('button' => $button_link,'class_alt' => 'link-btn t-w fw-b', 'has_arrow' => false)); ?>
+            <?php get_template_part('partials/button', null, array('button' => $button_link,'class_alt' => 'link-btn t-w fw-b popup-menu-item', 'has_arrow' => false)); ?>
           </li>
         </ul>
 

@@ -1530,7 +1530,7 @@ section .maxwrap {
     width: 50%;
     padding: 0 20px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
 }
 .cont-txt {
@@ -2036,14 +2036,16 @@ section .maxwrap {
     justify-content: space-between;
     align-items: center;
     background: var(--accent-color);
+    flex-wrap: wrap;
 }
 .loc-map ul.na-attractions-categories-wrap > li {
-    width: 33.3333%;
+    width: 25%;
     flex: 0 0 auto;
     border-right: 1px solid var(--white);
+    border-bottom: 1px solid var(--white);
 }
 .loc-map ul.na-attractions-categories-wrap > li:last-child {
-    border: none;
+    /*border: none;*/
 }
 .loc-map ul.na-attractions-categories-wrap button {
     width: 100%;
@@ -2836,7 +2838,7 @@ section .maxwrap {
     .sec-floorplan-full { padding: 30px 0 70px; }
     .na-attractions { padding: 30px 10px!important; }
     .loc-map ul.na-attractions-categories-wrap > li {
-        width: auto;
+        width: 50%;
     }
     .loc-map ul.na-attractions-categories-wrap button {
         font-size: 1.5rem;
@@ -2881,7 +2883,7 @@ section .maxwrap {
     .bnr-content h2{
         animation: 1s fadeIn;
         animation-fill-mode: forwards;  
-        visibility: hidden;
+        /*visibility: hidden;*/
         font-size: 3rem;
         font-weight: 100;
         font-family: initial !important;
@@ -2890,7 +2892,7 @@ section .maxwrap {
     .bnr-content p{
         animation: 1s fadeIn;
         animation-fill-mode: forwards;  
-        visibility: hidden;
+        /*visibility: hidden;*/
         font-family: initial !important;
     }
     #featured .maxwrap .row .col-lg-6 .catg-tagline {
@@ -2914,7 +2916,7 @@ section .maxwrap {
         font-size: 10px !important;
         animation: 1s fadeIn;
         animation-fill-mode: forwards;  
-        visibility: hidden;
+        /*visibility: hidden;*/
     }
     .wmark-img{
         display: block;
