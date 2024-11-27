@@ -6,8 +6,8 @@ Author: Brindle Digital
 Author URI: https://www.brindledigital.com/
 GitHub Theme URI: https://github.com/sarahbrindle/brindle-oxbow
 GitHub Branch:    master
-Version: v1.0.0.20
-Date:            12-11-2024
+Version: v1.0.0.21
+Date:            27-11-2024
 Requires at least: 5.0
 Tested up to: 5.7
 Requires PHP: 7.0
@@ -2169,6 +2169,38 @@ section .maxwrap {
     margin: 0px;
     padding-top: 40px;
 }
+/*Video Banner start*/
+.video-outer {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 90px) !important;
+}
+.video-outer video{
+    top: 0;
+    left: 0;
+    width: 100%;  
+    height: 100%;      
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: relative;
+}
+.video-outer .color-overlay {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    background-color: #000;
+    opacity: .3;
+}
+.video-outer video{
+   object-fit: cover !important;
+}
+/*Video Banner end*/
 /*== RESPONSIVE ==*/
 @media only screen and (max-height: 950px) {
     .overlay-menu li a {
