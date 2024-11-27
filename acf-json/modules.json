@@ -137,6 +137,101 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_673c36f8843ad": {
+                    "key": "layout_673c36f8843ad",
+                    "name": "hero-video",
+                    "label": "Hero Video",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_673c39f99f4a3",
+                            "label": "Video File",
+                            "name": "video_file",
+                            "aria-label": "",
+                            "type": "file",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "url",
+                            "library": "all",
+                            "min_size": "",
+                            "max_size": "",
+                            "mime_types": "",
+                            "allow_in_bindings": 1
+                        },
+                        {
+                            "key": "field_673c58cd9753d",
+                            "label": "Poster",
+                            "name": "poster",
+                            "aria-label": "",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "url",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": "",
+                            "allow_in_bindings": 0,
+                            "preview_size": "medium"
+                        },
+                        {
+                            "key": "field_673c36f8843b0",
+                            "label": "Banner Info",
+                            "name": "banner_info",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "allow_in_bindings": 1,
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_673c36f8843b1",
+                            "label": "Banner Button",
+                            "name": "banner_button",
+                            "aria-label": "",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "allow_in_bindings": 1
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_65aa3c047fdd9": {
                     "key": "layout_65aa3c047fdd9",
                     "name": "feature",
@@ -2054,5 +2149,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1728465873
+    "modified": 1732008169
 }
